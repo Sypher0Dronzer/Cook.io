@@ -18,6 +18,11 @@
       href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap"
       rel="stylesheet"
     />
+    <!-- -------------swiper js--------------- -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 
     <!-- ----------------------icons--------------------- -->
     <link
@@ -33,6 +38,7 @@
     />
   </head>
   <body>
+    <!-- ---------------navbar------------ -->
     <div class="navbar">
       <div class="left-nav">
         <a href="index.html" class="logo">
@@ -42,17 +48,17 @@
       </div>
       <div class="laptop">
         <div class="mid-nav">
-          <a href="" class="focused">Home</a>
-          <a href="">Recipes</a>
+          <a href="index.html" class="focused">Home</a>
+          <a href="recipes.html">Recipes</a>
         </div>
       </div>
       <div class="mobile">
         <div class="mid-nav">
           <div class="">
-            <a href="" class="focused">Home</a>
+            <a href="index.html" class="focused">Home</a>
           </div>
           <div class="">
-            <a href="">Recipes</a>
+            <a href="recipes.html">Recipes</a>
           </div>
         </div>
       </div>
@@ -79,12 +85,10 @@
       <p>Search any recipe e.g: burger, pizza, sandwich, toast.</p>
     </div>
     <!-- ---------------------Tabs Section  -------------------------- -->
-    <div class="tab-container">
+    <div class="tab-container section">
       <div class="tab-list">
-        <div class="tab-name active-tab" data-tabNumber="0">
-          Breakfast
-        </div>
-        <div class="tab-name" data-tabNumber='1'>Lunch</div>
+        <div class="tab-name active-tab" data-tabNumber="0">Breakfast</div>
+        <div class="tab-name" data-tabNumber="1">Lunch</div>
         <div class="tab-name" data-tabNumber="2">Dinner</div>
         <div class="tab-name" data-tabNumber="3">Snack</div>
         <div class="tab-name" data-tabNumber="4">Teatime</div>
@@ -92,7 +96,11 @@
 
       <div class="tab-content-list">
         <!-- -------------------breakfast--------- -->
-        <div class="tab-content active-tab-content" data-tabNumber="0" id="BreakfastTab">
+        <div
+          class="tab-content active-tab-content"
+          data-tabNumber="0"
+          id="breakfast"
+        >
           <div class="card">
             <div class="food-img-div">
               <img
@@ -174,9 +182,8 @@
             </div>
           </div>
         </div>
-        
-          
-        <div class="tab-content" data-tabNumber='1' id="LunchTab">
+
+        <div class="tab-content" data-tabNumber="1" id="lunch">
           <div class="card">
             <div class="food-img-div">
               <img
@@ -198,33 +205,7 @@
             </div>
           </div>
         </div>
-        <div class="tab-content" data-tabNumber="2" id="DinnerTab">
-          <div class="card">
-            <div class="food-img-div">
-              <img
-                src="https://edamam-product-images.s3.amazonaws.com/web-img/5fa/5fabd3ddc504ce8ca0267ac3acba9638.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEE8aCXVzLWVhc3QtMSJIMEYCIQDh2pNJtOK%2FQx9vq0yHoBhhRIT0YtTDcdASsMJoJwp5swIhAMXUkqo5F7wjgtg1kYXpSXlWv6FpAno%2Fda2nmnnzRd9aKsIFCIj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABoMMTg3MDE3MTUwOTg2IgwyPMydnCWilaEEjKkqlgVi9YJymvKOUKmQlYcZtWnU3DcokU2AOzIPMD3r5gqFCxrZ%2BlLEm%2FmfmAWn4cNB5zQBueM5qyMazkuw4iD1wq45Hq1fDUhH%2Fu1UJva9ub9WVKT%2FhW3hYIXf2NVGUn7eNqqt3YqoX2dNsYR1H9BFz%2FreELXWjsdeGM5qzmsBAAL2z3GjMBq5J4Cab3D4PpHMCQTs%2FWE1J3W5Jlb6EXNLqdLLy8mMVidt%2BhO1fnYUjcvVwZf1b9%2Bju%2BD8JkF4MB1xgwR5ZGAF5R8tGfFdDWOkZlUj3wtmbTjCLolcX%2FIxmqNQEXvLBMn9CaViJmTfrZ2aWVDzfTd5XWpx%2FKvDmbC32ZxxXTDTOc7ZztrYvdhQSLrUTo2nJ0WDvzhUdiKCTtbJD3Iac399uhKkGpUKSmq%2B2Izpnjwm3ahCVLCwBtOw%2FBU9QNZHEmfiaUjcyEfbbK6cwdFqRIKE3muUSbHFQ15JiCrrFDLhHAF0oqWetHUW%2Bt12mkp705EryIwkJhuT7o5Do3N%2BuZrzV8jvCpvVwCl5NTTqgw4i5VwHsboQnkE3k4r%2BQjKI72zTc2vOZs0DEfGhy0%2BF%2FxlNxc%2F7KUXxYUp%2FP3HuSqU1m1FGu0EksiM66yzHN3MYe2zHQHUqI%2FzDpp%2F52z4FKhK2O48n6X6Ghs0fHP0uLZvDCgFCN%2FGFpPiZHVpK2FFqrYY2cSw29%2BOp8wSDMNmt6GyngD3A5lCEe14oXp%2BhMg%2BAUXZVFDFcYvkSnRoxS4T7fcnJsZ5wokQIpIr9QgP%2BRLEQlN2K71ys323U8TdcEjqMeG2lKEdm3LzrNY7DHQAmAclSV2gAUbUrauBw8ADKhrH2vrveXip%2BKZDoO3unSFaiEZLE0Fu9ByyMd1Fmh%2BhFytEbszCJ8e2wBjqwAUHPyKoZ2vS791dJK%2Bs6fyXsfzN4h9YqAyafGbzbW%2BwwfLEpVjAO9tjJioUYfizDrOMoncE8OnTM4zzx47pLNszsQFzpFi1W1gKzBoOeVIMa9OHBmtBmQGWjjwagbydwTe%2BJvFLaphInMDeNQnLM2H3izUy3cmNYIErs9%2BiYTVItCrI4Ng6FjJivI3R%2BLRAfYnPhP4k2ptXzKBzXQuwegIBBUsoGnnLZfvv8r129sKIi&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20240414T074443Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIASXCYXIIFLXONI7FI%2F20240414%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=a89608849f7a4ec5cd01055db869c352e4058d4711be7c3fd32a265414f7aa6e"
-                alt=""
-              />
-            </div>
-            <div class="food-details">
-              <h5 class="food-name">Spelt Everything Crackers</h5>
-              <div class="bottom-div">
-                <div class="time-div">
-                  <span class="material-symbols-outlined"> timer </span>
-                  <p>5 minutes</p>
-                </div>
-                <span class="material-symbols-outlined view-btn">
-                  visibility
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="card"></div>
-          <div class="card"></div>
-          <div class="card"></div>
-          <div class="card"></div>
-        </div>
-        <div class="tab-content" data-tabNumber="3" id="SnackTab">
+        <div class="tab-content" data-tabNumber="2" id="dinner">
           <div class="card">
             <div class="food-img-div">
               <img
@@ -250,7 +231,33 @@
           <div class="card"></div>
           <div class="card"></div>
         </div>
-        <div class="tab-content" data-tabNumber="4" id="TeatimeTab">
+        <div class="tab-content" data-tabNumber="3" id="snack">
+          <div class="card">
+            <div class="food-img-div">
+              <img
+                src="https://edamam-product-images.s3.amazonaws.com/web-img/5fa/5fabd3ddc504ce8ca0267ac3acba9638.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEE8aCXVzLWVhc3QtMSJIMEYCIQDh2pNJtOK%2FQx9vq0yHoBhhRIT0YtTDcdASsMJoJwp5swIhAMXUkqo5F7wjgtg1kYXpSXlWv6FpAno%2Fda2nmnnzRd9aKsIFCIj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABoMMTg3MDE3MTUwOTg2IgwyPMydnCWilaEEjKkqlgVi9YJymvKOUKmQlYcZtWnU3DcokU2AOzIPMD3r5gqFCxrZ%2BlLEm%2FmfmAWn4cNB5zQBueM5qyMazkuw4iD1wq45Hq1fDUhH%2Fu1UJva9ub9WVKT%2FhW3hYIXf2NVGUn7eNqqt3YqoX2dNsYR1H9BFz%2FreELXWjsdeGM5qzmsBAAL2z3GjMBq5J4Cab3D4PpHMCQTs%2FWE1J3W5Jlb6EXNLqdLLy8mMVidt%2BhO1fnYUjcvVwZf1b9%2Bju%2BD8JkF4MB1xgwR5ZGAF5R8tGfFdDWOkZlUj3wtmbTjCLolcX%2FIxmqNQEXvLBMn9CaViJmTfrZ2aWVDzfTd5XWpx%2FKvDmbC32ZxxXTDTOc7ZztrYvdhQSLrUTo2nJ0WDvzhUdiKCTtbJD3Iac399uhKkGpUKSmq%2B2Izpnjwm3ahCVLCwBtOw%2FBU9QNZHEmfiaUjcyEfbbK6cwdFqRIKE3muUSbHFQ15JiCrrFDLhHAF0oqWetHUW%2Bt12mkp705EryIwkJhuT7o5Do3N%2BuZrzV8jvCpvVwCl5NTTqgw4i5VwHsboQnkE3k4r%2BQjKI72zTc2vOZs0DEfGhy0%2BF%2FxlNxc%2F7KUXxYUp%2FP3HuSqU1m1FGu0EksiM66yzHN3MYe2zHQHUqI%2FzDpp%2F52z4FKhK2O48n6X6Ghs0fHP0uLZvDCgFCN%2FGFpPiZHVpK2FFqrYY2cSw29%2BOp8wSDMNmt6GyngD3A5lCEe14oXp%2BhMg%2BAUXZVFDFcYvkSnRoxS4T7fcnJsZ5wokQIpIr9QgP%2BRLEQlN2K71ys323U8TdcEjqMeG2lKEdm3LzrNY7DHQAmAclSV2gAUbUrauBw8ADKhrH2vrveXip%2BKZDoO3unSFaiEZLE0Fu9ByyMd1Fmh%2BhFytEbszCJ8e2wBjqwAUHPyKoZ2vS791dJK%2Bs6fyXsfzN4h9YqAyafGbzbW%2BwwfLEpVjAO9tjJioUYfizDrOMoncE8OnTM4zzx47pLNszsQFzpFi1W1gKzBoOeVIMa9OHBmtBmQGWjjwagbydwTe%2BJvFLaphInMDeNQnLM2H3izUy3cmNYIErs9%2BiYTVItCrI4Ng6FjJivI3R%2BLRAfYnPhP4k2ptXzKBzXQuwegIBBUsoGnnLZfvv8r129sKIi&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20240414T074443Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIASXCYXIIFLXONI7FI%2F20240414%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=a89608849f7a4ec5cd01055db869c352e4058d4711be7c3fd32a265414f7aa6e"
+                alt=""
+              />
+            </div>
+            <div class="food-details">
+              <h5 class="food-name">Spelt Everything Crackers</h5>
+              <div class="bottom-div">
+                <div class="time-div">
+                  <span class="material-symbols-outlined"> timer </span>
+                  <p>5 minutes</p>
+                </div>
+                <span class="material-symbols-outlined view-btn">
+                  visibility
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+        </div>
+        <div class="tab-content" data-tabNumber="4" id="teatime">
           <div class="card">
             <div class="food-img-div">
               <img
@@ -275,14 +282,372 @@
       </div>
     </div>
 
-    <!-- ----------------------breakfast data--------------------- -->
+    <div class="center-div">
+      <a href="" class="show-more">Show more</a>
+    </div>
 
-    <script type="module" src="js/home.js"></script>
+    <!-- ------------------------------asian recipes---------------------------- -->
+    <div class="asian-container section">
+      <h1>Popular Asian Recipes</h1>
+
+      <div class="swiper mySwiper1">
+        <div class="swiper-wrapper" id="asian">
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="food-img-div">
+                <img
+                  src="https://edamam-product-images.s3.amazonaws.com/web-img/5fa/5fabd3ddc504ce8ca0267ac3acba9638.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEE8aCXVzLWVhc3QtMSJIMEYCIQDh2pNJtOK%2FQx9vq0yHoBhhRIT0YtTDcdASsMJoJwp5swIhAMXUkqo5F7wjgtg1kYXpSXlWv6FpAno%2Fda2nmnnzRd9aKsIFCIj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABoMMTg3MDE3MTUwOTg2IgwyPMydnCWilaEEjKkqlgVi9YJymvKOUKmQlYcZtWnU3DcokU2AOzIPMD3r5gqFCxrZ%2BlLEm%2FmfmAWn4cNB5zQBueM5qyMazkuw4iD1wq45Hq1fDUhH%2Fu1UJva9ub9WVKT%2FhW3hYIXf2NVGUn7eNqqt3YqoX2dNsYR1H9BFz%2FreELXWjsdeGM5qzmsBAAL2z3GjMBq5J4Cab3D4PpHMCQTs%2FWE1J3W5Jlb6EXNLqdLLy8mMVidt%2BhO1fnYUjcvVwZf1b9%2Bju%2BD8JkF4MB1xgwR5ZGAF5R8tGfFdDWOkZlUj3wtmbTjCLolcX%2FIxmqNQEXvLBMn9CaViJmTfrZ2aWVDzfTd5XWpx%2FKvDmbC32ZxxXTDTOc7ZztrYvdhQSLrUTo2nJ0WDvzhUdiKCTtbJD3Iac399uhKkGpUKSmq%2B2Izpnjwm3ahCVLCwBtOw%2FBU9QNZHEmfiaUjcyEfbbK6cwdFqRIKE3muUSbHFQ15JiCrrFDLhHAF0oqWetHUW%2Bt12mkp705EryIwkJhuT7o5Do3N%2BuZrzV8jvCpvVwCl5NTTqgw4i5VwHsboQnkE3k4r%2BQjKI72zTc2vOZs0DEfGhy0%2BF%2FxlNxc%2F7KUXxYUp%2FP3HuSqU1m1FGu0EksiM66yzHN3MYe2zHQHUqI%2FzDpp%2F52z4FKhK2O48n6X6Ghs0fHP0uLZvDCgFCN%2FGFpPiZHVpK2FFqrYY2cSw29%2BOp8wSDMNmt6GyngD3A5lCEe14oXp%2BhMg%2BAUXZVFDFcYvkSnRoxS4T7fcnJsZ5wokQIpIr9QgP%2BRLEQlN2K71ys323U8TdcEjqMeG2lKEdm3LzrNY7DHQAmAclSV2gAUbUrauBw8ADKhrH2vrveXip%2BKZDoO3unSFaiEZLE0Fu9ByyMd1Fmh%2BhFytEbszCJ8e2wBjqwAUHPyKoZ2vS791dJK%2Bs6fyXsfzN4h9YqAyafGbzbW%2BwwfLEpVjAO9tjJioUYfizDrOMoncE8OnTM4zzx47pLNszsQFzpFi1W1gKzBoOeVIMa9OHBmtBmQGWjjwagbydwTe%2BJvFLaphInMDeNQnLM2H3izUy3cmNYIErs9%2BiYTVItCrI4Ng6FjJivI3R%2BLRAfYnPhP4k2ptXzKBzXQuwegIBBUsoGnnLZfvv8r129sKIi&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20240414T074443Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIASXCYXIIFLXONI7FI%2F20240414%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=a89608849f7a4ec5cd01055db869c352e4058d4711be7c3fd32a265414f7aa6e"
+                  alt=""
+                />
+              </div>
+              <div class="food-details">
+                <h5 class="food-name">Spelt Everything Crackers</h5>
+                <div class="bottom-div">
+                  <div class="time-div">
+                    <span class="material-symbols-outlined"> timer </span>
+                    <p>5 minutes</p>
+                  </div>
+                  <span class="material-symbols-outlined view-btn">
+                    visibility
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="food-img-div">
+                <img
+                  src="https://edamam-product-images.s3.amazonaws.com/web-img/5fa/5fabd3ddc504ce8ca0267ac3acba9638.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEE8aCXVzLWVhc3QtMSJIMEYCIQDh2pNJtOK%2FQx9vq0yHoBhhRIT0YtTDcdASsMJoJwp5swIhAMXUkqo5F7wjgtg1kYXpSXlWv6FpAno%2Fda2nmnnzRd9aKsIFCIj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABoMMTg3MDE3MTUwOTg2IgwyPMydnCWilaEEjKkqlgVi9YJymvKOUKmQlYcZtWnU3DcokU2AOzIPMD3r5gqFCxrZ%2BlLEm%2FmfmAWn4cNB5zQBueM5qyMazkuw4iD1wq45Hq1fDUhH%2Fu1UJva9ub9WVKT%2FhW3hYIXf2NVGUn7eNqqt3YqoX2dNsYR1H9BFz%2FreELXWjsdeGM5qzmsBAAL2z3GjMBq5J4Cab3D4PpHMCQTs%2FWE1J3W5Jlb6EXNLqdLLy8mMVidt%2BhO1fnYUjcvVwZf1b9%2Bju%2BD8JkF4MB1xgwR5ZGAF5R8tGfFdDWOkZlUj3wtmbTjCLolcX%2FIxmqNQEXvLBMn9CaViJmTfrZ2aWVDzfTd5XWpx%2FKvDmbC32ZxxXTDTOc7ZztrYvdhQSLrUTo2nJ0WDvzhUdiKCTtbJD3Iac399uhKkGpUKSmq%2B2Izpnjwm3ahCVLCwBtOw%2FBU9QNZHEmfiaUjcyEfbbK6cwdFqRIKE3muUSbHFQ15JiCrrFDLhHAF0oqWetHUW%2Bt12mkp705EryIwkJhuT7o5Do3N%2BuZrzV8jvCpvVwCl5NTTqgw4i5VwHsboQnkE3k4r%2BQjKI72zTc2vOZs0DEfGhy0%2BF%2FxlNxc%2F7KUXxYUp%2FP3HuSqU1m1FGu0EksiM66yzHN3MYe2zHQHUqI%2FzDpp%2F52z4FKhK2O48n6X6Ghs0fHP0uLZvDCgFCN%2FGFpPiZHVpK2FFqrYY2cSw29%2BOp8wSDMNmt6GyngD3A5lCEe14oXp%2BhMg%2BAUXZVFDFcYvkSnRoxS4T7fcnJsZ5wokQIpIr9QgP%2BRLEQlN2K71ys323U8TdcEjqMeG2lKEdm3LzrNY7DHQAmAclSV2gAUbUrauBw8ADKhrH2vrveXip%2BKZDoO3unSFaiEZLE0Fu9ByyMd1Fmh%2BhFytEbszCJ8e2wBjqwAUHPyKoZ2vS791dJK%2Bs6fyXsfzN4h9YqAyafGbzbW%2BwwfLEpVjAO9tjJioUYfizDrOMoncE8OnTM4zzx47pLNszsQFzpFi1W1gKzBoOeVIMa9OHBmtBmQGWjjwagbydwTe%2BJvFLaphInMDeNQnLM2H3izUy3cmNYIErs9%2BiYTVItCrI4Ng6FjJivI3R%2BLRAfYnPhP4k2ptXzKBzXQuwegIBBUsoGnnLZfvv8r129sKIi&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20240414T074443Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIASXCYXIIFLXONI7FI%2F20240414%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=a89608849f7a4ec5cd01055db869c352e4058d4711be7c3fd32a265414f7aa6e"
+                  alt=""
+                />
+              </div>
+              <div class="food-details">
+                <h5 class="food-name">Spelt Everything Crackers</h5>
+                <div class="bottom-div">
+                  <div class="time-div">
+                    <span class="material-symbols-outlined"> timer </span>
+                    <p>5 minutes</p>
+                  </div>
+                  <span class="material-symbols-outlined view-btn">
+                    visibility
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="food-img-div">
+                <img
+                  src="https://edamam-product-images.s3.amazonaws.com/web-img/5fa/5fabd3ddc504ce8ca0267ac3acba9638.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEE8aCXVzLWVhc3QtMSJIMEYCIQDh2pNJtOK%2FQx9vq0yHoBhhRIT0YtTDcdASsMJoJwp5swIhAMXUkqo5F7wjgtg1kYXpSXlWv6FpAno%2Fda2nmnnzRd9aKsIFCIj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABoMMTg3MDE3MTUwOTg2IgwyPMydnCWilaEEjKkqlgVi9YJymvKOUKmQlYcZtWnU3DcokU2AOzIPMD3r5gqFCxrZ%2BlLEm%2FmfmAWn4cNB5zQBueM5qyMazkuw4iD1wq45Hq1fDUhH%2Fu1UJva9ub9WVKT%2FhW3hYIXf2NVGUn7eNqqt3YqoX2dNsYR1H9BFz%2FreELXWjsdeGM5qzmsBAAL2z3GjMBq5J4Cab3D4PpHMCQTs%2FWE1J3W5Jlb6EXNLqdLLy8mMVidt%2BhO1fnYUjcvVwZf1b9%2Bju%2BD8JkF4MB1xgwR5ZGAF5R8tGfFdDWOkZlUj3wtmbTjCLolcX%2FIxmqNQEXvLBMn9CaViJmTfrZ2aWVDzfTd5XWpx%2FKvDmbC32ZxxXTDTOc7ZztrYvdhQSLrUTo2nJ0WDvzhUdiKCTtbJD3Iac399uhKkGpUKSmq%2B2Izpnjwm3ahCVLCwBtOw%2FBU9QNZHEmfiaUjcyEfbbK6cwdFqRIKE3muUSbHFQ15JiCrrFDLhHAF0oqWetHUW%2Bt12mkp705EryIwkJhuT7o5Do3N%2BuZrzV8jvCpvVwCl5NTTqgw4i5VwHsboQnkE3k4r%2BQjKI72zTc2vOZs0DEfGhy0%2BF%2FxlNxc%2F7KUXxYUp%2FP3HuSqU1m1FGu0EksiM66yzHN3MYe2zHQHUqI%2FzDpp%2F52z4FKhK2O48n6X6Ghs0fHP0uLZvDCgFCN%2FGFpPiZHVpK2FFqrYY2cSw29%2BOp8wSDMNmt6GyngD3A5lCEe14oXp%2BhMg%2BAUXZVFDFcYvkSnRoxS4T7fcnJsZ5wokQIpIr9QgP%2BRLEQlN2K71ys323U8TdcEjqMeG2lKEdm3LzrNY7DHQAmAclSV2gAUbUrauBw8ADKhrH2vrveXip%2BKZDoO3unSFaiEZLE0Fu9ByyMd1Fmh%2BhFytEbszCJ8e2wBjqwAUHPyKoZ2vS791dJK%2Bs6fyXsfzN4h9YqAyafGbzbW%2BwwfLEpVjAO9tjJioUYfizDrOMoncE8OnTM4zzx47pLNszsQFzpFi1W1gKzBoOeVIMa9OHBmtBmQGWjjwagbydwTe%2BJvFLaphInMDeNQnLM2H3izUy3cmNYIErs9%2BiYTVItCrI4Ng6FjJivI3R%2BLRAfYnPhP4k2ptXzKBzXQuwegIBBUsoGnnLZfvv8r129sKIi&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20240414T074443Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIASXCYXIIFLXONI7FI%2F20240414%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=a89608849f7a4ec5cd01055db869c352e4058d4711be7c3fd32a265414f7aa6e"
+                  alt=""
+                />
+              </div>
+              <div class="food-details">
+                <h5 class="food-name">Spelt Everything Crackers</h5>
+                <div class="bottom-div">
+                  <div class="time-div">
+                    <span class="material-symbols-outlined"> timer </span>
+                    <p>5 minutes</p>
+                  </div>
+                  <span class="material-symbols-outlined view-btn">
+                    visibility
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="food-img-div">
+                <img
+                  src="https://edamam-product-images.s3.amazonaws.com/web-img/5fa/5fabd3ddc504ce8ca0267ac3acba9638.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEE8aCXVzLWVhc3QtMSJIMEYCIQDh2pNJtOK%2FQx9vq0yHoBhhRIT0YtTDcdASsMJoJwp5swIhAMXUkqo5F7wjgtg1kYXpSXlWv6FpAno%2Fda2nmnnzRd9aKsIFCIj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABoMMTg3MDE3MTUwOTg2IgwyPMydnCWilaEEjKkqlgVi9YJymvKOUKmQlYcZtWnU3DcokU2AOzIPMD3r5gqFCxrZ%2BlLEm%2FmfmAWn4cNB5zQBueM5qyMazkuw4iD1wq45Hq1fDUhH%2Fu1UJva9ub9WVKT%2FhW3hYIXf2NVGUn7eNqqt3YqoX2dNsYR1H9BFz%2FreELXWjsdeGM5qzmsBAAL2z3GjMBq5J4Cab3D4PpHMCQTs%2FWE1J3W5Jlb6EXNLqdLLy8mMVidt%2BhO1fnYUjcvVwZf1b9%2Bju%2BD8JkF4MB1xgwR5ZGAF5R8tGfFdDWOkZlUj3wtmbTjCLolcX%2FIxmqNQEXvLBMn9CaViJmTfrZ2aWVDzfTd5XWpx%2FKvDmbC32ZxxXTDTOc7ZztrYvdhQSLrUTo2nJ0WDvzhUdiKCTtbJD3Iac399uhKkGpUKSmq%2B2Izpnjwm3ahCVLCwBtOw%2FBU9QNZHEmfiaUjcyEfbbK6cwdFqRIKE3muUSbHFQ15JiCrrFDLhHAF0oqWetHUW%2Bt12mkp705EryIwkJhuT7o5Do3N%2BuZrzV8jvCpvVwCl5NTTqgw4i5VwHsboQnkE3k4r%2BQjKI72zTc2vOZs0DEfGhy0%2BF%2FxlNxc%2F7KUXxYUp%2FP3HuSqU1m1FGu0EksiM66yzHN3MYe2zHQHUqI%2FzDpp%2F52z4FKhK2O48n6X6Ghs0fHP0uLZvDCgFCN%2FGFpPiZHVpK2FFqrYY2cSw29%2BOp8wSDMNmt6GyngD3A5lCEe14oXp%2BhMg%2BAUXZVFDFcYvkSnRoxS4T7fcnJsZ5wokQIpIr9QgP%2BRLEQlN2K71ys323U8TdcEjqMeG2lKEdm3LzrNY7DHQAmAclSV2gAUbUrauBw8ADKhrH2vrveXip%2BKZDoO3unSFaiEZLE0Fu9ByyMd1Fmh%2BhFytEbszCJ8e2wBjqwAUHPyKoZ2vS791dJK%2Bs6fyXsfzN4h9YqAyafGbzbW%2BwwfLEpVjAO9tjJioUYfizDrOMoncE8OnTM4zzx47pLNszsQFzpFi1W1gKzBoOeVIMa9OHBmtBmQGWjjwagbydwTe%2BJvFLaphInMDeNQnLM2H3izUy3cmNYIErs9%2BiYTVItCrI4Ng6FjJivI3R%2BLRAfYnPhP4k2ptXzKBzXQuwegIBBUsoGnnLZfvv8r129sKIi&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20240414T074443Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIASXCYXIIFLXONI7FI%2F20240414%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=a89608849f7a4ec5cd01055db869c352e4058d4711be7c3fd32a265414f7aa6e"
+                  alt=""
+                />
+              </div>
+              <div class="food-details">
+                <h5 class="food-name">Spelt Everything Crackers</h5>
+                <div class="bottom-div">
+                  <div class="time-div">
+                    <span class="material-symbols-outlined"> timer </span>
+                    <p>5 minutes</p>
+                  </div>
+                  <span class="material-symbols-outlined view-btn">
+                    visibility
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="food-img-div">
+                <img
+                  src="https://edamam-product-images.s3.amazonaws.com/web-img/5fa/5fabd3ddc504ce8ca0267ac3acba9638.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEE8aCXVzLWVhc3QtMSJIMEYCIQDh2pNJtOK%2FQx9vq0yHoBhhRIT0YtTDcdASsMJoJwp5swIhAMXUkqo5F7wjgtg1kYXpSXlWv6FpAno%2Fda2nmnnzRd9aKsIFCIj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABoMMTg3MDE3MTUwOTg2IgwyPMydnCWilaEEjKkqlgVi9YJymvKOUKmQlYcZtWnU3DcokU2AOzIPMD3r5gqFCxrZ%2BlLEm%2FmfmAWn4cNB5zQBueM5qyMazkuw4iD1wq45Hq1fDUhH%2Fu1UJva9ub9WVKT%2FhW3hYIXf2NVGUn7eNqqt3YqoX2dNsYR1H9BFz%2FreELXWjsdeGM5qzmsBAAL2z3GjMBq5J4Cab3D4PpHMCQTs%2FWE1J3W5Jlb6EXNLqdLLy8mMVidt%2BhO1fnYUjcvVwZf1b9%2Bju%2BD8JkF4MB1xgwR5ZGAF5R8tGfFdDWOkZlUj3wtmbTjCLolcX%2FIxmqNQEXvLBMn9CaViJmTfrZ2aWVDzfTd5XWpx%2FKvDmbC32ZxxXTDTOc7ZztrYvdhQSLrUTo2nJ0WDvzhUdiKCTtbJD3Iac399uhKkGpUKSmq%2B2Izpnjwm3ahCVLCwBtOw%2FBU9QNZHEmfiaUjcyEfbbK6cwdFqRIKE3muUSbHFQ15JiCrrFDLhHAF0oqWetHUW%2Bt12mkp705EryIwkJhuT7o5Do3N%2BuZrzV8jvCpvVwCl5NTTqgw4i5VwHsboQnkE3k4r%2BQjKI72zTc2vOZs0DEfGhy0%2BF%2FxlNxc%2F7KUXxYUp%2FP3HuSqU1m1FGu0EksiM66yzHN3MYe2zHQHUqI%2FzDpp%2F52z4FKhK2O48n6X6Ghs0fHP0uLZvDCgFCN%2FGFpPiZHVpK2FFqrYY2cSw29%2BOp8wSDMNmt6GyngD3A5lCEe14oXp%2BhMg%2BAUXZVFDFcYvkSnRoxS4T7fcnJsZ5wokQIpIr9QgP%2BRLEQlN2K71ys323U8TdcEjqMeG2lKEdm3LzrNY7DHQAmAclSV2gAUbUrauBw8ADKhrH2vrveXip%2BKZDoO3unSFaiEZLE0Fu9ByyMd1Fmh%2BhFytEbszCJ8e2wBjqwAUHPyKoZ2vS791dJK%2Bs6fyXsfzN4h9YqAyafGbzbW%2BwwfLEpVjAO9tjJioUYfizDrOMoncE8OnTM4zzx47pLNszsQFzpFi1W1gKzBoOeVIMa9OHBmtBmQGWjjwagbydwTe%2BJvFLaphInMDeNQnLM2H3izUy3cmNYIErs9%2BiYTVItCrI4Ng6FjJivI3R%2BLRAfYnPhP4k2ptXzKBzXQuwegIBBUsoGnnLZfvv8r129sKIi&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20240414T074443Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIASXCYXIIFLXONI7FI%2F20240414%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=a89608849f7a4ec5cd01055db869c352e4058d4711be7c3fd32a265414f7aa6e"
+                  alt=""
+                />
+              </div>
+              <div class="food-details">
+                <h5 class="food-name">Spelt Everything Crackers</h5>
+                <div class="bottom-div">
+                  <div class="time-div">
+                    <span class="material-symbols-outlined"> timer </span>
+                    <p>5 minutes</p>
+                  </div>
+                  <span class="material-symbols-outlined view-btn">
+                    visibility
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="food-img-div">
+                <img
+                  src="https://edamam-product-images.s3.amazonaws.com/web-img/5fa/5fabd3ddc504ce8ca0267ac3acba9638.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEE8aCXVzLWVhc3QtMSJIMEYCIQDh2pNJtOK%2FQx9vq0yHoBhhRIT0YtTDcdASsMJoJwp5swIhAMXUkqo5F7wjgtg1kYXpSXlWv6FpAno%2Fda2nmnnzRd9aKsIFCIj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABoMMTg3MDE3MTUwOTg2IgwyPMydnCWilaEEjKkqlgVi9YJymvKOUKmQlYcZtWnU3DcokU2AOzIPMD3r5gqFCxrZ%2BlLEm%2FmfmAWn4cNB5zQBueM5qyMazkuw4iD1wq45Hq1fDUhH%2Fu1UJva9ub9WVKT%2FhW3hYIXf2NVGUn7eNqqt3YqoX2dNsYR1H9BFz%2FreELXWjsdeGM5qzmsBAAL2z3GjMBq5J4Cab3D4PpHMCQTs%2FWE1J3W5Jlb6EXNLqdLLy8mMVidt%2BhO1fnYUjcvVwZf1b9%2Bju%2BD8JkF4MB1xgwR5ZGAF5R8tGfFdDWOkZlUj3wtmbTjCLolcX%2FIxmqNQEXvLBMn9CaViJmTfrZ2aWVDzfTd5XWpx%2FKvDmbC32ZxxXTDTOc7ZztrYvdhQSLrUTo2nJ0WDvzhUdiKCTtbJD3Iac399uhKkGpUKSmq%2B2Izpnjwm3ahCVLCwBtOw%2FBU9QNZHEmfiaUjcyEfbbK6cwdFqRIKE3muUSbHFQ15JiCrrFDLhHAF0oqWetHUW%2Bt12mkp705EryIwkJhuT7o5Do3N%2BuZrzV8jvCpvVwCl5NTTqgw4i5VwHsboQnkE3k4r%2BQjKI72zTc2vOZs0DEfGhy0%2BF%2FxlNxc%2F7KUXxYUp%2FP3HuSqU1m1FGu0EksiM66yzHN3MYe2zHQHUqI%2FzDpp%2F52z4FKhK2O48n6X6Ghs0fHP0uLZvDCgFCN%2FGFpPiZHVpK2FFqrYY2cSw29%2BOp8wSDMNmt6GyngD3A5lCEe14oXp%2BhMg%2BAUXZVFDFcYvkSnRoxS4T7fcnJsZ5wokQIpIr9QgP%2BRLEQlN2K71ys323U8TdcEjqMeG2lKEdm3LzrNY7DHQAmAclSV2gAUbUrauBw8ADKhrH2vrveXip%2BKZDoO3unSFaiEZLE0Fu9ByyMd1Fmh%2BhFytEbszCJ8e2wBjqwAUHPyKoZ2vS791dJK%2Bs6fyXsfzN4h9YqAyafGbzbW%2BwwfLEpVjAO9tjJioUYfizDrOMoncE8OnTM4zzx47pLNszsQFzpFi1W1gKzBoOeVIMa9OHBmtBmQGWjjwagbydwTe%2BJvFLaphInMDeNQnLM2H3izUy3cmNYIErs9%2BiYTVItCrI4Ng6FjJivI3R%2BLRAfYnPhP4k2ptXzKBzXQuwegIBBUsoGnnLZfvv8r129sKIi&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20240414T074443Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIASXCYXIIFLXONI7FI%2F20240414%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=a89608849f7a4ec5cd01055db869c352e4058d4711be7c3fd32a265414f7aa6e"
+                  alt=""
+                />
+              </div>
+              <div class="food-details">
+                <h5 class="food-name">Spelt Everything Crackers</h5>
+                <div class="bottom-div">
+                  <div class="time-div">
+                    <span class="material-symbols-outlined"> timer </span>
+                    <p>5 minutes</p>
+                  </div>
+                  <span class="material-symbols-outlined view-btn">
+                    visibility
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="food-img-div">
+                <img
+                  src="https://edamam-product-images.s3.amazonaws.com/web-img/5fa/5fabd3ddc504ce8ca0267ac3acba9638.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEE8aCXVzLWVhc3QtMSJIMEYCIQDh2pNJtOK%2FQx9vq0yHoBhhRIT0YtTDcdASsMJoJwp5swIhAMXUkqo5F7wjgtg1kYXpSXlWv6FpAno%2Fda2nmnnzRd9aKsIFCIj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABoMMTg3MDE3MTUwOTg2IgwyPMydnCWilaEEjKkqlgVi9YJymvKOUKmQlYcZtWnU3DcokU2AOzIPMD3r5gqFCxrZ%2BlLEm%2FmfmAWn4cNB5zQBueM5qyMazkuw4iD1wq45Hq1fDUhH%2Fu1UJva9ub9WVKT%2FhW3hYIXf2NVGUn7eNqqt3YqoX2dNsYR1H9BFz%2FreELXWjsdeGM5qzmsBAAL2z3GjMBq5J4Cab3D4PpHMCQTs%2FWE1J3W5Jlb6EXNLqdLLy8mMVidt%2BhO1fnYUjcvVwZf1b9%2Bju%2BD8JkF4MB1xgwR5ZGAF5R8tGfFdDWOkZlUj3wtmbTjCLolcX%2FIxmqNQEXvLBMn9CaViJmTfrZ2aWVDzfTd5XWpx%2FKvDmbC32ZxxXTDTOc7ZztrYvdhQSLrUTo2nJ0WDvzhUdiKCTtbJD3Iac399uhKkGpUKSmq%2B2Izpnjwm3ahCVLCwBtOw%2FBU9QNZHEmfiaUjcyEfbbK6cwdFqRIKE3muUSbHFQ15JiCrrFDLhHAF0oqWetHUW%2Bt12mkp705EryIwkJhuT7o5Do3N%2BuZrzV8jvCpvVwCl5NTTqgw4i5VwHsboQnkE3k4r%2BQjKI72zTc2vOZs0DEfGhy0%2BF%2FxlNxc%2F7KUXxYUp%2FP3HuSqU1m1FGu0EksiM66yzHN3MYe2zHQHUqI%2FzDpp%2F52z4FKhK2O48n6X6Ghs0fHP0uLZvDCgFCN%2FGFpPiZHVpK2FFqrYY2cSw29%2BOp8wSDMNmt6GyngD3A5lCEe14oXp%2BhMg%2BAUXZVFDFcYvkSnRoxS4T7fcnJsZ5wokQIpIr9QgP%2BRLEQlN2K71ys323U8TdcEjqMeG2lKEdm3LzrNY7DHQAmAclSV2gAUbUrauBw8ADKhrH2vrveXip%2BKZDoO3unSFaiEZLE0Fu9ByyMd1Fmh%2BhFytEbszCJ8e2wBjqwAUHPyKoZ2vS791dJK%2Bs6fyXsfzN4h9YqAyafGbzbW%2BwwfLEpVjAO9tjJioUYfizDrOMoncE8OnTM4zzx47pLNszsQFzpFi1W1gKzBoOeVIMa9OHBmtBmQGWjjwagbydwTe%2BJvFLaphInMDeNQnLM2H3izUy3cmNYIErs9%2BiYTVItCrI4Ng6FjJivI3R%2BLRAfYnPhP4k2ptXzKBzXQuwegIBBUsoGnnLZfvv8r129sKIi&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20240414T074443Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIASXCYXIIFLXONI7FI%2F20240414%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=a89608849f7a4ec5cd01055db869c352e4058d4711be7c3fd32a265414f7aa6e"
+                  alt=""
+                />
+              </div>
+              <div class="food-details">
+                <h5 class="food-name">Spelt Everything Crackers</h5>
+                <div class="bottom-div">
+                  <div class="time-div">
+                    <span class="material-symbols-outlined"> timer </span>
+                    <p>5 minutes</p>
+                  </div>
+                  <span class="material-symbols-outlined view-btn">
+                    visibility
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="center-div">
+      <a href="" class="show-more">Show more</a>
+    </div>
+
+    <!-- ------------------------------french recipes---------------------------- -->
+    <div class="french-container section">
+      <h1>Latest French Recipes</h1>
+
+      <div class="swiper mySwiper2" id="french">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="food-img-div">
+                <img
+                  src="https://edamam-product-images.s3.amazonaws.com/web-img/5fa/5fabd3ddc504ce8ca0267ac3acba9638.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEE8aCXVzLWVhc3QtMSJIMEYCIQDh2pNJtOK%2FQx9vq0yHoBhhRIT0YtTDcdASsMJoJwp5swIhAMXUkqo5F7wjgtg1kYXpSXlWv6FpAno%2Fda2nmnnzRd9aKsIFCIj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABoMMTg3MDE3MTUwOTg2IgwyPMydnCWilaEEjKkqlgVi9YJymvKOUKmQlYcZtWnU3DcokU2AOzIPMD3r5gqFCxrZ%2BlLEm%2FmfmAWn4cNB5zQBueM5qyMazkuw4iD1wq45Hq1fDUhH%2Fu1UJva9ub9WVKT%2FhW3hYIXf2NVGUn7eNqqt3YqoX2dNsYR1H9BFz%2FreELXWjsdeGM5qzmsBAAL2z3GjMBq5J4Cab3D4PpHMCQTs%2FWE1J3W5Jlb6EXNLqdLLy8mMVidt%2BhO1fnYUjcvVwZf1b9%2Bju%2BD8JkF4MB1xgwR5ZGAF5R8tGfFdDWOkZlUj3wtmbTjCLolcX%2FIxmqNQEXvLBMn9CaViJmTfrZ2aWVDzfTd5XWpx%2FKvDmbC32ZxxXTDTOc7ZztrYvdhQSLrUTo2nJ0WDvzhUdiKCTtbJD3Iac399uhKkGpUKSmq%2B2Izpnjwm3ahCVLCwBtOw%2FBU9QNZHEmfiaUjcyEfbbK6cwdFqRIKE3muUSbHFQ15JiCrrFDLhHAF0oqWetHUW%2Bt12mkp705EryIwkJhuT7o5Do3N%2BuZrzV8jvCpvVwCl5NTTqgw4i5VwHsboQnkE3k4r%2BQjKI72zTc2vOZs0DEfGhy0%2BF%2FxlNxc%2F7KUXxYUp%2FP3HuSqU1m1FGu0EksiM66yzHN3MYe2zHQHUqI%2FzDpp%2F52z4FKhK2O48n6X6Ghs0fHP0uLZvDCgFCN%2FGFpPiZHVpK2FFqrYY2cSw29%2BOp8wSDMNmt6GyngD3A5lCEe14oXp%2BhMg%2BAUXZVFDFcYvkSnRoxS4T7fcnJsZ5wokQIpIr9QgP%2BRLEQlN2K71ys323U8TdcEjqMeG2lKEdm3LzrNY7DHQAmAclSV2gAUbUrauBw8ADKhrH2vrveXip%2BKZDoO3unSFaiEZLE0Fu9ByyMd1Fmh%2BhFytEbszCJ8e2wBjqwAUHPyKoZ2vS791dJK%2Bs6fyXsfzN4h9YqAyafGbzbW%2BwwfLEpVjAO9tjJioUYfizDrOMoncE8OnTM4zzx47pLNszsQFzpFi1W1gKzBoOeVIMa9OHBmtBmQGWjjwagbydwTe%2BJvFLaphInMDeNQnLM2H3izUy3cmNYIErs9%2BiYTVItCrI4Ng6FjJivI3R%2BLRAfYnPhP4k2ptXzKBzXQuwegIBBUsoGnnLZfvv8r129sKIi&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20240414T074443Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIASXCYXIIFLXONI7FI%2F20240414%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=a89608849f7a4ec5cd01055db869c352e4058d4711be7c3fd32a265414f7aa6e"
+                  alt=""
+                />
+              </div>
+              <div class="food-details">
+                <h5 class="food-name">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum laborum unde incidunt modi sapiente officiis, autem ratione asperiores temporibus mollitia blanditiis consequuntur cupiditate.Crackers</h5>
+                <div class="bottom-div">
+                  <div class="time-div">
+                    <span class="material-symbols-outlined"> timer </span>
+                    <p>5 minutes</p>
+                  </div>
+                  <span class="material-symbols-outlined view-btn">
+                    visibility
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="food-img-div">
+                <img
+                  src="https://edamam-product-images.s3.amazonaws.com/web-img/5fa/5fabd3ddc504ce8ca0267ac3acba9638.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEE8aCXVzLWVhc3QtMSJIMEYCIQDh2pNJtOK%2FQx9vq0yHoBhhRIT0YtTDcdASsMJoJwp5swIhAMXUkqo5F7wjgtg1kYXpSXlWv6FpAno%2Fda2nmnnzRd9aKsIFCIj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABoMMTg3MDE3MTUwOTg2IgwyPMydnCWilaEEjKkqlgVi9YJymvKOUKmQlYcZtWnU3DcokU2AOzIPMD3r5gqFCxrZ%2BlLEm%2FmfmAWn4cNB5zQBueM5qyMazkuw4iD1wq45Hq1fDUhH%2Fu1UJva9ub9WVKT%2FhW3hYIXf2NVGUn7eNqqt3YqoX2dNsYR1H9BFz%2FreELXWjsdeGM5qzmsBAAL2z3GjMBq5J4Cab3D4PpHMCQTs%2FWE1J3W5Jlb6EXNLqdLLy8mMVidt%2BhO1fnYUjcvVwZf1b9%2Bju%2BD8JkF4MB1xgwR5ZGAF5R8tGfFdDWOkZlUj3wtmbTjCLolcX%2FIxmqNQEXvLBMn9CaViJmTfrZ2aWVDzfTd5XWpx%2FKvDmbC32ZxxXTDTOc7ZztrYvdhQSLrUTo2nJ0WDvzhUdiKCTtbJD3Iac399uhKkGpUKSmq%2B2Izpnjwm3ahCVLCwBtOw%2FBU9QNZHEmfiaUjcyEfbbK6cwdFqRIKE3muUSbHFQ15JiCrrFDLhHAF0oqWetHUW%2Bt12mkp705EryIwkJhuT7o5Do3N%2BuZrzV8jvCpvVwCl5NTTqgw4i5VwHsboQnkE3k4r%2BQjKI72zTc2vOZs0DEfGhy0%2BF%2FxlNxc%2F7KUXxYUp%2FP3HuSqU1m1FGu0EksiM66yzHN3MYe2zHQHUqI%2FzDpp%2F52z4FKhK2O48n6X6Ghs0fHP0uLZvDCgFCN%2FGFpPiZHVpK2FFqrYY2cSw29%2BOp8wSDMNmt6GyngD3A5lCEe14oXp%2BhMg%2BAUXZVFDFcYvkSnRoxS4T7fcnJsZ5wokQIpIr9QgP%2BRLEQlN2K71ys323U8TdcEjqMeG2lKEdm3LzrNY7DHQAmAclSV2gAUbUrauBw8ADKhrH2vrveXip%2BKZDoO3unSFaiEZLE0Fu9ByyMd1Fmh%2BhFytEbszCJ8e2wBjqwAUHPyKoZ2vS791dJK%2Bs6fyXsfzN4h9YqAyafGbzbW%2BwwfLEpVjAO9tjJioUYfizDrOMoncE8OnTM4zzx47pLNszsQFzpFi1W1gKzBoOeVIMa9OHBmtBmQGWjjwagbydwTe%2BJvFLaphInMDeNQnLM2H3izUy3cmNYIErs9%2BiYTVItCrI4Ng6FjJivI3R%2BLRAfYnPhP4k2ptXzKBzXQuwegIBBUsoGnnLZfvv8r129sKIi&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20240414T074443Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIASXCYXIIFLXONI7FI%2F20240414%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=a89608849f7a4ec5cd01055db869c352e4058d4711be7c3fd32a265414f7aa6e"
+                  alt=""
+                />
+              </div>
+              <div class="food-details">
+                <h5 class="food-name">Spelt</h5>
+                <div class="bottom-div">
+                  <div class="time-div">
+                    <span class="material-symbols-outlined"> timer </span>
+                    <p>5 minutes</p>
+                  </div>
+                  <span class="material-symbols-outlined view-btn">
+                    visibility
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="food-img-div">
+                <img
+                  src="https://edamam-product-images.s3.amazonaws.com/web-img/5fa/5fabd3ddc504ce8ca0267ac3acba9638.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEE8aCXVzLWVhc3QtMSJIMEYCIQDh2pNJtOK%2FQx9vq0yHoBhhRIT0YtTDcdASsMJoJwp5swIhAMXUkqo5F7wjgtg1kYXpSXlWv6FpAno%2Fda2nmnnzRd9aKsIFCIj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABoMMTg3MDE3MTUwOTg2IgwyPMydnCWilaEEjKkqlgVi9YJymvKOUKmQlYcZtWnU3DcokU2AOzIPMD3r5gqFCxrZ%2BlLEm%2FmfmAWn4cNB5zQBueM5qyMazkuw4iD1wq45Hq1fDUhH%2Fu1UJva9ub9WVKT%2FhW3hYIXf2NVGUn7eNqqt3YqoX2dNsYR1H9BFz%2FreELXWjsdeGM5qzmsBAAL2z3GjMBq5J4Cab3D4PpHMCQTs%2FWE1J3W5Jlb6EXNLqdLLy8mMVidt%2BhO1fnYUjcvVwZf1b9%2Bju%2BD8JkF4MB1xgwR5ZGAF5R8tGfFdDWOkZlUj3wtmbTjCLolcX%2FIxmqNQEXvLBMn9CaViJmTfrZ2aWVDzfTd5XWpx%2FKvDmbC32ZxxXTDTOc7ZztrYvdhQSLrUTo2nJ0WDvzhUdiKCTtbJD3Iac399uhKkGpUKSmq%2B2Izpnjwm3ahCVLCwBtOw%2FBU9QNZHEmfiaUjcyEfbbK6cwdFqRIKE3muUSbHFQ15JiCrrFDLhHAF0oqWetHUW%2Bt12mkp705EryIwkJhuT7o5Do3N%2BuZrzV8jvCpvVwCl5NTTqgw4i5VwHsboQnkE3k4r%2BQjKI72zTc2vOZs0DEfGhy0%2BF%2FxlNxc%2F7KUXxYUp%2FP3HuSqU1m1FGu0EksiM66yzHN3MYe2zHQHUqI%2FzDpp%2F52z4FKhK2O48n6X6Ghs0fHP0uLZvDCgFCN%2FGFpPiZHVpK2FFqrYY2cSw29%2BOp8wSDMNmt6GyngD3A5lCEe14oXp%2BhMg%2BAUXZVFDFcYvkSnRoxS4T7fcnJsZ5wokQIpIr9QgP%2BRLEQlN2K71ys323U8TdcEjqMeG2lKEdm3LzrNY7DHQAmAclSV2gAUbUrauBw8ADKhrH2vrveXip%2BKZDoO3unSFaiEZLE0Fu9ByyMd1Fmh%2BhFytEbszCJ8e2wBjqwAUHPyKoZ2vS791dJK%2Bs6fyXsfzN4h9YqAyafGbzbW%2BwwfLEpVjAO9tjJioUYfizDrOMoncE8OnTM4zzx47pLNszsQFzpFi1W1gKzBoOeVIMa9OHBmtBmQGWjjwagbydwTe%2BJvFLaphInMDeNQnLM2H3izUy3cmNYIErs9%2BiYTVItCrI4Ng6FjJivI3R%2BLRAfYnPhP4k2ptXzKBzXQuwegIBBUsoGnnLZfvv8r129sKIi&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20240414T074443Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIASXCYXIIFLXONI7FI%2F20240414%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=a89608849f7a4ec5cd01055db869c352e4058d4711be7c3fd32a265414f7aa6e"
+                  alt=""
+                />
+              </div>
+              <div class="food-details">
+                <h5 class="food-name">Spelt Everything Crackers</h5>
+                <div class="bottom-div">
+                  <div class="time-div">
+                    <span class="material-symbols-outlined"> timer </span>
+                    <p>5 minutes</p>
+                  </div>
+                  <span class="material-symbols-outlined view-btn">
+                    visibility
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="food-img-div">
+                <img
+                  src="https://edamam-product-images.s3.amazonaws.com/web-img/5fa/5fabd3ddc504ce8ca0267ac3acba9638.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEE8aCXVzLWVhc3QtMSJIMEYCIQDh2pNJtOK%2FQx9vq0yHoBhhRIT0YtTDcdASsMJoJwp5swIhAMXUkqo5F7wjgtg1kYXpSXlWv6FpAno%2Fda2nmnnzRd9aKsIFCIj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABoMMTg3MDE3MTUwOTg2IgwyPMydnCWilaEEjKkqlgVi9YJymvKOUKmQlYcZtWnU3DcokU2AOzIPMD3r5gqFCxrZ%2BlLEm%2FmfmAWn4cNB5zQBueM5qyMazkuw4iD1wq45Hq1fDUhH%2Fu1UJva9ub9WVKT%2FhW3hYIXf2NVGUn7eNqqt3YqoX2dNsYR1H9BFz%2FreELXWjsdeGM5qzmsBAAL2z3GjMBq5J4Cab3D4PpHMCQTs%2FWE1J3W5Jlb6EXNLqdLLy8mMVidt%2BhO1fnYUjcvVwZf1b9%2Bju%2BD8JkF4MB1xgwR5ZGAF5R8tGfFdDWOkZlUj3wtmbTjCLolcX%2FIxmqNQEXvLBMn9CaViJmTfrZ2aWVDzfTd5XWpx%2FKvDmbC32ZxxXTDTOc7ZztrYvdhQSLrUTo2nJ0WDvzhUdiKCTtbJD3Iac399uhKkGpUKSmq%2B2Izpnjwm3ahCVLCwBtOw%2FBU9QNZHEmfiaUjcyEfbbK6cwdFqRIKE3muUSbHFQ15JiCrrFDLhHAF0oqWetHUW%2Bt12mkp705EryIwkJhuT7o5Do3N%2BuZrzV8jvCpvVwCl5NTTqgw4i5VwHsboQnkE3k4r%2BQjKI72zTc2vOZs0DEfGhy0%2BF%2FxlNxc%2F7KUXxYUp%2FP3HuSqU1m1FGu0EksiM66yzHN3MYe2zHQHUqI%2FzDpp%2F52z4FKhK2O48n6X6Ghs0fHP0uLZvDCgFCN%2FGFpPiZHVpK2FFqrYY2cSw29%2BOp8wSDMNmt6GyngD3A5lCEe14oXp%2BhMg%2BAUXZVFDFcYvkSnRoxS4T7fcnJsZ5wokQIpIr9QgP%2BRLEQlN2K71ys323U8TdcEjqMeG2lKEdm3LzrNY7DHQAmAclSV2gAUbUrauBw8ADKhrH2vrveXip%2BKZDoO3unSFaiEZLE0Fu9ByyMd1Fmh%2BhFytEbszCJ8e2wBjqwAUHPyKoZ2vS791dJK%2Bs6fyXsfzN4h9YqAyafGbzbW%2BwwfLEpVjAO9tjJioUYfizDrOMoncE8OnTM4zzx47pLNszsQFzpFi1W1gKzBoOeVIMa9OHBmtBmQGWjjwagbydwTe%2BJvFLaphInMDeNQnLM2H3izUy3cmNYIErs9%2BiYTVItCrI4Ng6FjJivI3R%2BLRAfYnPhP4k2ptXzKBzXQuwegIBBUsoGnnLZfvv8r129sKIi&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20240414T074443Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIASXCYXIIFLXONI7FI%2F20240414%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=a89608849f7a4ec5cd01055db869c352e4058d4711be7c3fd32a265414f7aa6e"
+                  alt=""
+                />
+              </div>
+              <div class="food-details">
+                <h5 class="food-name">Spelt Everything Crackers</h5>
+                <div class="bottom-div">
+                  <div class="time-div">
+                    <span class="material-symbols-outlined"> timer </span>
+                    <p>5 minutes</p>
+                  </div>
+                  <span class="material-symbols-outlined view-btn">
+                    visibility
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="food-img-div">
+                <img
+                  src="https://edamam-product-images.s3.amazonaws.com/web-img/5fa/5fabd3ddc504ce8ca0267ac3acba9638.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEE8aCXVzLWVhc3QtMSJIMEYCIQDh2pNJtOK%2FQx9vq0yHoBhhRIT0YtTDcdASsMJoJwp5swIhAMXUkqo5F7wjgtg1kYXpSXlWv6FpAno%2Fda2nmnnzRd9aKsIFCIj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABoMMTg3MDE3MTUwOTg2IgwyPMydnCWilaEEjKkqlgVi9YJymvKOUKmQlYcZtWnU3DcokU2AOzIPMD3r5gqFCxrZ%2BlLEm%2FmfmAWn4cNB5zQBueM5qyMazkuw4iD1wq45Hq1fDUhH%2Fu1UJva9ub9WVKT%2FhW3hYIXf2NVGUn7eNqqt3YqoX2dNsYR1H9BFz%2FreELXWjsdeGM5qzmsBAAL2z3GjMBq5J4Cab3D4PpHMCQTs%2FWE1J3W5Jlb6EXNLqdLLy8mMVidt%2BhO1fnYUjcvVwZf1b9%2Bju%2BD8JkF4MB1xgwR5ZGAF5R8tGfFdDWOkZlUj3wtmbTjCLolcX%2FIxmqNQEXvLBMn9CaViJmTfrZ2aWVDzfTd5XWpx%2FKvDmbC32ZxxXTDTOc7ZztrYvdhQSLrUTo2nJ0WDvzhUdiKCTtbJD3Iac399uhKkGpUKSmq%2B2Izpnjwm3ahCVLCwBtOw%2FBU9QNZHEmfiaUjcyEfbbK6cwdFqRIKE3muUSbHFQ15JiCrrFDLhHAF0oqWetHUW%2Bt12mkp705EryIwkJhuT7o5Do3N%2BuZrzV8jvCpvVwCl5NTTqgw4i5VwHsboQnkE3k4r%2BQjKI72zTc2vOZs0DEfGhy0%2BF%2FxlNxc%2F7KUXxYUp%2FP3HuSqU1m1FGu0EksiM66yzHN3MYe2zHQHUqI%2FzDpp%2F52z4FKhK2O48n6X6Ghs0fHP0uLZvDCgFCN%2FGFpPiZHVpK2FFqrYY2cSw29%2BOp8wSDMNmt6GyngD3A5lCEe14oXp%2BhMg%2BAUXZVFDFcYvkSnRoxS4T7fcnJsZ5wokQIpIr9QgP%2BRLEQlN2K71ys323U8TdcEjqMeG2lKEdm3LzrNY7DHQAmAclSV2gAUbUrauBw8ADKhrH2vrveXip%2BKZDoO3unSFaiEZLE0Fu9ByyMd1Fmh%2BhFytEbszCJ8e2wBjqwAUHPyKoZ2vS791dJK%2Bs6fyXsfzN4h9YqAyafGbzbW%2BwwfLEpVjAO9tjJioUYfizDrOMoncE8OnTM4zzx47pLNszsQFzpFi1W1gKzBoOeVIMa9OHBmtBmQGWjjwagbydwTe%2BJvFLaphInMDeNQnLM2H3izUy3cmNYIErs9%2BiYTVItCrI4Ng6FjJivI3R%2BLRAfYnPhP4k2ptXzKBzXQuwegIBBUsoGnnLZfvv8r129sKIi&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20240414T074443Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIASXCYXIIFLXONI7FI%2F20240414%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=a89608849f7a4ec5cd01055db869c352e4058d4711be7c3fd32a265414f7aa6e"
+                  alt=""
+                />
+              </div>
+              <div class="food-details">
+                <h5 class="food-name">Spelt Everything Crackers</h5>
+                <div class="bottom-div">
+                  <div class="time-div">
+                    <span class="material-symbols-outlined"> timer </span>
+                    <p>5 minutes</p>
+                  </div>
+                  <span class="material-symbols-outlined view-btn">
+                    visibility
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="food-img-div">
+                <img
+                  src="https://edamam-product-images.s3.amazonaws.com/web-img/5fa/5fabd3ddc504ce8ca0267ac3acba9638.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEE8aCXVzLWVhc3QtMSJIMEYCIQDh2pNJtOK%2FQx9vq0yHoBhhRIT0YtTDcdASsMJoJwp5swIhAMXUkqo5F7wjgtg1kYXpSXlWv6FpAno%2Fda2nmnnzRd9aKsIFCIj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABoMMTg3MDE3MTUwOTg2IgwyPMydnCWilaEEjKkqlgVi9YJymvKOUKmQlYcZtWnU3DcokU2AOzIPMD3r5gqFCxrZ%2BlLEm%2FmfmAWn4cNB5zQBueM5qyMazkuw4iD1wq45Hq1fDUhH%2Fu1UJva9ub9WVKT%2FhW3hYIXf2NVGUn7eNqqt3YqoX2dNsYR1H9BFz%2FreELXWjsdeGM5qzmsBAAL2z3GjMBq5J4Cab3D4PpHMCQTs%2FWE1J3W5Jlb6EXNLqdLLy8mMVidt%2BhO1fnYUjcvVwZf1b9%2Bju%2BD8JkF4MB1xgwR5ZGAF5R8tGfFdDWOkZlUj3wtmbTjCLolcX%2FIxmqNQEXvLBMn9CaViJmTfrZ2aWVDzfTd5XWpx%2FKvDmbC32ZxxXTDTOc7ZztrYvdhQSLrUTo2nJ0WDvzhUdiKCTtbJD3Iac399uhKkGpUKSmq%2B2Izpnjwm3ahCVLCwBtOw%2FBU9QNZHEmfiaUjcyEfbbK6cwdFqRIKE3muUSbHFQ15JiCrrFDLhHAF0oqWetHUW%2Bt12mkp705EryIwkJhuT7o5Do3N%2BuZrzV8jvCpvVwCl5NTTqgw4i5VwHsboQnkE3k4r%2BQjKI72zTc2vOZs0DEfGhy0%2BF%2FxlNxc%2F7KUXxYUp%2FP3HuSqU1m1FGu0EksiM66yzHN3MYe2zHQHUqI%2FzDpp%2F52z4FKhK2O48n6X6Ghs0fHP0uLZvDCgFCN%2FGFpPiZHVpK2FFqrYY2cSw29%2BOp8wSDMNmt6GyngD3A5lCEe14oXp%2BhMg%2BAUXZVFDFcYvkSnRoxS4T7fcnJsZ5wokQIpIr9QgP%2BRLEQlN2K71ys323U8TdcEjqMeG2lKEdm3LzrNY7DHQAmAclSV2gAUbUrauBw8ADKhrH2vrveXip%2BKZDoO3unSFaiEZLE0Fu9ByyMd1Fmh%2BhFytEbszCJ8e2wBjqwAUHPyKoZ2vS791dJK%2Bs6fyXsfzN4h9YqAyafGbzbW%2BwwfLEpVjAO9tjJioUYfizDrOMoncE8OnTM4zzx47pLNszsQFzpFi1W1gKzBoOeVIMa9OHBmtBmQGWjjwagbydwTe%2BJvFLaphInMDeNQnLM2H3izUy3cmNYIErs9%2BiYTVItCrI4Ng6FjJivI3R%2BLRAfYnPhP4k2ptXzKBzXQuwegIBBUsoGnnLZfvv8r129sKIi&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20240414T074443Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIASXCYXIIFLXONI7FI%2F20240414%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=a89608849f7a4ec5cd01055db869c352e4058d4711be7c3fd32a265414f7aa6e"
+                  alt=""
+                />
+              </div>
+              <div class="food-details">
+                <h5 class="food-name">Spelt Everything Crackers</h5>
+                <div class="bottom-div">
+                  <div class="time-div">
+                    <span class="material-symbols-outlined"> timer </span>
+                    <p>5 minutes</p>
+                  </div>
+                  <span class="material-symbols-outlined view-btn">
+                    visibility
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="food-img-div">
+                <img
+                  src="https://edamam-product-images.s3.amazonaws.com/web-img/5fa/5fabd3ddc504ce8ca0267ac3acba9638.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEE8aCXVzLWVhc3QtMSJIMEYCIQDh2pNJtOK%2FQx9vq0yHoBhhRIT0YtTDcdASsMJoJwp5swIhAMXUkqo5F7wjgtg1kYXpSXlWv6FpAno%2Fda2nmnnzRd9aKsIFCIj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABoMMTg3MDE3MTUwOTg2IgwyPMydnCWilaEEjKkqlgVi9YJymvKOUKmQlYcZtWnU3DcokU2AOzIPMD3r5gqFCxrZ%2BlLEm%2FmfmAWn4cNB5zQBueM5qyMazkuw4iD1wq45Hq1fDUhH%2Fu1UJva9ub9WVKT%2FhW3hYIXf2NVGUn7eNqqt3YqoX2dNsYR1H9BFz%2FreELXWjsdeGM5qzmsBAAL2z3GjMBq5J4Cab3D4PpHMCQTs%2FWE1J3W5Jlb6EXNLqdLLy8mMVidt%2BhO1fnYUjcvVwZf1b9%2Bju%2BD8JkF4MB1xgwR5ZGAF5R8tGfFdDWOkZlUj3wtmbTjCLolcX%2FIxmqNQEXvLBMn9CaViJmTfrZ2aWVDzfTd5XWpx%2FKvDmbC32ZxxXTDTOc7ZztrYvdhQSLrUTo2nJ0WDvzhUdiKCTtbJD3Iac399uhKkGpUKSmq%2B2Izpnjwm3ahCVLCwBtOw%2FBU9QNZHEmfiaUjcyEfbbK6cwdFqRIKE3muUSbHFQ15JiCrrFDLhHAF0oqWetHUW%2Bt12mkp705EryIwkJhuT7o5Do3N%2BuZrzV8jvCpvVwCl5NTTqgw4i5VwHsboQnkE3k4r%2BQjKI72zTc2vOZs0DEfGhy0%2BF%2FxlNxc%2F7KUXxYUp%2FP3HuSqU1m1FGu0EksiM66yzHN3MYe2zHQHUqI%2FzDpp%2F52z4FKhK2O48n6X6Ghs0fHP0uLZvDCgFCN%2FGFpPiZHVpK2FFqrYY2cSw29%2BOp8wSDMNmt6GyngD3A5lCEe14oXp%2BhMg%2BAUXZVFDFcYvkSnRoxS4T7fcnJsZ5wokQIpIr9QgP%2BRLEQlN2K71ys323U8TdcEjqMeG2lKEdm3LzrNY7DHQAmAclSV2gAUbUrauBw8ADKhrH2vrveXip%2BKZDoO3unSFaiEZLE0Fu9ByyMd1Fmh%2BhFytEbszCJ8e2wBjqwAUHPyKoZ2vS791dJK%2Bs6fyXsfzN4h9YqAyafGbzbW%2BwwfLEpVjAO9tjJioUYfizDrOMoncE8OnTM4zzx47pLNszsQFzpFi1W1gKzBoOeVIMa9OHBmtBmQGWjjwagbydwTe%2BJvFLaphInMDeNQnLM2H3izUy3cmNYIErs9%2BiYTVItCrI4Ng6FjJivI3R%2BLRAfYnPhP4k2ptXzKBzXQuwegIBBUsoGnnLZfvv8r129sKIi&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20240414T074443Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIASXCYXIIFLXONI7FI%2F20240414%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=a89608849f7a4ec5cd01055db869c352e4058d4711be7c3fd32a265414f7aa6e"
+                  alt=""
+                />
+              </div>
+              <div class="food-details">
+                <h5 class="food-name">Spelt Everything Crackers</h5>
+                <div class="bottom-div">
+                  <div class="time-div">
+                    <span class="material-symbols-outlined"> timer </span>
+                    <p>5 minutes</p>
+                  </div>
+                  <span class="material-symbols-outlined view-btn">
+                    visibility
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="center-div">
+      <a href="" class="show-more">Show more</a>
+    </div>
+
+
+    <!-- ---------------------------Health Preference----------------------------- -->
+    <div class="pref-container section">
+      <h1>Choose your health preference.</h1>
+      <p>Choosing your health preference is an important step towards achieving a healthier lifestyle.</p>
+      <div class="flex-div">
+        <div class="preference">Wheat-free</div>
+      </div>
+    </div>
+
+    <script  src="js/home.js"></script>
+    <!-- <script src="js/card.js"></script> -->
 
     <!-- ----------------------Theme--------------------- -->
     <script src="js/theme.js"></script>
-    <!-- ----------------------tab navigation--------------------- -->
 
+      <!-- ---------------------------Health Preference----------------------------- -->
+      <script src="js/healthPreference.js"></script>
+
+    <!-- ----------------------tab navigation--------------------- -->
     <script src="js/tabNavigation.js"></script>
+
+    <!-- ---------------------------Swiper---------------------- -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/swiper.js"></script>
   </body>
 </html>

@@ -10,6 +10,7 @@
   --card-color: white;
   --navbg: white;
   --hover: rgb(235, 230, 230);
+  --primary-light:hsl(11, 94%, 64%);
 }
 .darktheme {
   --background: hsl(0, 0%, 10%);
@@ -20,6 +21,8 @@
   --card-color: black;
   --navbg: #0c0c0c;
   --hover: hsl(11, 60%, 50%);
+  --primary-light:hsl(0, 1%, 23%);
+
 }
 
 body {
@@ -73,6 +76,10 @@ body {
   font-size: 16px;
   color: var(--gray-text);
   font-family: "DM Sans", sans-serif;
+}
+.mid-nav a:hover{
+  color: var(--primary);
+  text-decoration: underline;
 }
 .mid-nav .focused {
   font-weight: bold;
@@ -246,11 +253,12 @@ body {
 .hero-sec button {
   color: white;
   background: var(--primary);
-  padding: 0 16px;
+  padding: 0 10px;
   border-radius: 0 1px 1px 0;
 }
 .hero-sec i {
   font-size: 20px;
+  color: white;
 }
 .hero-sec p {
   margin-top: 15px;
@@ -264,7 +272,7 @@ body {
     background-repeat: no-repeat;
   }
   .hero-sec .input-box {
-    height: 35px;
+    height: 40px;
     width: 320px;
   }
   .hero-sec h1 {
@@ -279,7 +287,7 @@ body {
     padding: 5px;
   }
   .hero-sec .input-box {
-    height: 30px;
+    height: 35px;
     width: 50vw;
   }
   .hero-sec h1 {
@@ -289,22 +297,9 @@ body {
 /*-----------------------------------*\
   #TAB
 \*-----------------------------------*/
-.tab-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 10px auto;
-  max-width: 1200px;
-}
-@media (max-width:1250px){
-  .tab-container{
-    margin: 10px 5vw;
-  }
-}
+
 @media (max-width:650px){
-  .tab-container{
-    margin: 10px 3vw;
-  }
+  
   .tab-content{
     padding: 0 ;
   }
@@ -385,6 +380,7 @@ body {
 @media (max-width: 1000px) {
   .tab-content-list .tab-content {
     grid-template-columns: repeat(4, 1fr);
+    max-width: 90vw;
   }
 }
 @media (max-width: 800px) {
@@ -468,17 +464,115 @@ body {
   background: var(--primary-hover);
 }
 /*-----------------------------------*\
-  #TAG
+  #Show more
 \*-----------------------------------*/
+.center-div{
+  display: flex;
+  justify-content: center;
+}
+.show-more{
+  text-align: center;
+  background: var(--primary);
+  color: white ;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  border: 2px solid var(--primary);
+}
+.show-more:hover{
+  background: white;
+  color: var(--primary);
+  
+}
+/*-----------------------------------*\
+  #Swiper
+\*-----------------------------------*/
+.section{
+  max-width: 1200px;
+  width: 100%;
+  margin: 20px auto ;
+}
+.asian-container .swiper, .french-container .swiper{
+  margin-top: 10px;
+  padding: 0 5px;
+}
+.swiper-slide{
+  background: #000;
+  height: 100%;
+}
+.swiper-wrapper{
+  background: yellow;
+  height: auto;
+}
+@media (max-width:1250px){
+  .section{
+    margin: 15px 5vw;
+    max-width: 90vw;
+  }
+}
 
 /*-----------------------------------*\
-  #FOOTER
+  #HEALTH PREFERENCE
 \*-----------------------------------*/
+.pref-container{
+  text-align: center;
+}
+.pref-container h1{
+  font-family: "DM Serif Display", serif;
+  letter-spacing: 2px;
+  font-weight: 400;
+  font-size: 2.7rem;
+  
+}
+.pref-container p{
+  max-width:40vw;
+  margin: 10px auto 20px;
+  font-size: 16px;
+}
+.flex-div{
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10PX;
+}
 
-/*-----------------------------------*\
-  #FILTER BAR
-\*-----------------------------------*/
 
+.flex-div .preference{
+  text-align: center;
+  background: var(--primary-light);
+  color: white ;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-size: 16px;
+  border: 2px solid var(--primary-light);
+  cursor: pointer;
+}
+.flex-div .preference:hover{
+  background: white;
+  color: var(--primary-light);
+  
+}
+
+@media (max-width:1000px){
+  .pref-container h1{
+    font-size: 2.5rem;    
+  }
+}
+@media (max-width:900px){
+  .pref-container p{
+    max-width:70vw;
+  }
+    .flex-div .preference{
+      font-size: 14px;
+  padding: 7px 10px;
+
+    }
+    .flex-div{
+      gap: 5px;
+    }
+}
 /*-----------------------------------*\
   #RECIPE PAGE
 \*-----------------------------------*/

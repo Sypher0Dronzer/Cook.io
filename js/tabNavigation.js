@@ -1,23 +1,3 @@
-const tabList = document.querySelector(".tab-list").getBoundingClientRect();
-let width = tabList.width;
-document.querySelectorAll(
-  ".tab-content-list .tab-content"
-).forEach(tab=>{
-    tab.style.width = `${width}px`;
-})
-
-
-window.addEventListener("resize", () => {
-  const tabList = document.querySelector(".tab-list").getBoundingClientRect();
-  width = tabList.width;
-  document.querySelectorAll(
-    ".tab-content-list .tab-content"
-  ).forEach(tab=>{
-      tab.style.width = `${width}px`;
-  })
-
-});
-
 // ----------------active tab switching-----------------
 
 document.querySelector('.tab-list').addEventListener('click',(e)=>{
