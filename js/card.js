@@ -47,7 +47,7 @@ async function fetchMealData(meal,mealHTML) {
               } minutes</p>
             </div>
             <span class="material-symbols-outlined view-btn">
-                visibility
+                bookmark
                 </span>
           </div>
         </div>
@@ -100,7 +100,7 @@ async function fetchSwiperMealData(meal,mealHTML) {
                 } minutes</p>
               </div>
               <span class="material-symbols-outlined view-btn">
-                  visibility
+                  bookmark
                   </span>
             </div>
           </div>

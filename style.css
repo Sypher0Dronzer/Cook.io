@@ -27,7 +27,6 @@
 
 body {
   background-color: var(--background);
-  height: 200rem;
 }
 * {
   padding: 0;
@@ -233,7 +232,7 @@ body {
   background: white;
   display: flex;
   align-items: center;
-  height: 40px;
+  height: 45px;
   padding: 5px 10px;
   width: 400px;
   border-radius: 1px 0 0 1px;
@@ -287,8 +286,7 @@ body {
     padding: 5px;
   }
   .hero-sec .input-box {
-    height: 35px;
-    width: 50vw;
+    width: 75vw;
   }
   .hero-sec h1 {
     font-size: 2rem;
@@ -358,7 +356,6 @@ body {
 .tab-content-list {
   display: flex;
   margin-top: 15px;
-  /* column-gap: 5.5px; */
 }
 .tab-content {
   display: grid;
@@ -394,6 +391,7 @@ body {
 @media (max-width: 580px) {
   .tab-content-list .tab-content {
     grid-template-columns: repeat(2, 1fr);
+    max-width: 96vw;
   }
 }
 /*-----------------------------------*\
@@ -427,6 +425,9 @@ body {
 
 .card .food-details {
   padding: 5px 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   
  
 }
@@ -453,15 +454,18 @@ body {
   align-items: center;
 }
 .view-btn {
-  background: var(--primary);
-  border-radius: 10px;
+  background: var(--primary-light);
+  border-radius: 50%;
   margin-right: 0;
+  border: 2px solid var(--primary-light);
+
   padding: 5px 5px;
   color: white;
   cursor: pointer;
 }
 .view-btn:hover{
-  background: var(--primary-hover);
+  color: var(--primary-hover);
+  background: white;
 }
 /*-----------------------------------*\
   #Show more
@@ -496,18 +500,22 @@ body {
   margin-top: 10px;
   padding: 0 5px;
 }
-.swiper-slide{
-  background: #000;
-  height: 100%;
-}
-.swiper-wrapper{
-  background: yellow;
-  height: auto;
-}
+
 @media (max-width:1250px){
   .section{
     margin: 15px 5vw;
     max-width: 90vw;
+  }
+}
+@media (max-width:580px){
+  .section{
+    margin: 15px 2vw;
+    max-width: 96vw;
+  }
+  .french-container h1,.asian-container h1{
+    font-size: 27px;
+    text-align: center;
+    margin-bottom: 10px;
   }
 }
 
@@ -573,20 +581,33 @@ body {
       gap: 5px;
     }
 }
+@media (max-width:580px){
+  .pref-container p{
+    max-width: 90vw;
+  }
+  .pref-container h1{
+    font-size: 1.9rem;
+  }
+}
 /*-----------------------------------*\
-  #RECIPE PAGE
+  #footer
 \*-----------------------------------*/
 
-/*-----------------------------------*\
-  #DETAIL PAGE
-\*-----------------------------------*/
+.footer-container{
+  display: flex;
+  justify-content: center;
+}
+.footer-container p{
+text-align: center;
+border-top: 1px solid var(--gray-text);
+width: 100%;
+max-width: 80vw;
+padding-top: 5px;
+}
+@media (max-width:600px){
 
-/* Skeleton */
+  .footer-container{
+    margin-bottom: 60px;
+  }
+}
 
-/*-----------------------------------*\
-  #SAVED RECIPE PAGE
-\*-----------------------------------*/
-
-/*-----------------------------------*\
-  #MEDIA QUERIES
-\*-----------------------------------*/

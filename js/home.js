@@ -1,5 +1,5 @@
 function adjustCardHeight() {
-  const cards = document.querySelectorAll('.swiper-slide .card');
+  const cards = document.querySelectorAll('.swiper-slide .card .food-details');
   let maxHeight = 0;
 
   cards.forEach((card) => {
