@@ -1,3 +1,5 @@
+import { getTime } from "./time.js";
+
 const apiKey = 'b060e94dcae3a95f66b401d2140fc22a';
 const appId = '0a5e1290';
 
@@ -27,24 +29,23 @@ async function fetchData(q) {
 async function fetchMealData(meal,mealHTML) {
   try {
     await fetchData(meal);
-    console.log(mealVariable); // Access the global variable here
     mealVariable.forEach((food) => {
+      let recipeId=food.recipe.uri.slice(food.recipe.uri.lastIndexOf("_") + 1);
+      let calctime=getTime(food.recipe.totalTime)
         mealHTML += `
-        <div class="card">
+        <div class="card" >
         <div class="food-img-div">
           <img
             src="${food.recipe.image}"
             alt=""
           />
         </div>
-        <div class="food-details">
+        <div class="food-details" data-recipe-id='${recipeId}'>
           <h5 class="food-name">${food.recipe.label}</h5>
           <div class="bottom-div">
             <div class="time-div">
               <span class="material-symbols-outlined"> timer </span>
-              <p>${
-                food.recipe.totalTime == 0 ? "<1" : food.recipe.totalTime
-              } minutes</p>
+              <p>${calctime.time || '<1'} ${calctime.timeUnit}</p>
             </div>
             <span class="material-symbols-outlined view-btn">
                 bookmark
@@ -54,6 +55,8 @@ async function fetchMealData(meal,mealHTML) {
         </div>`;
       });
       document.querySelector(`#${meal}`).innerHTML=mealHTML
+      adjustCardHeight()
+
   }
    catch (error) {
     // Handle any errors here
@@ -79,8 +82,9 @@ fetchSwiperMealData('french',frenchHTML)
 async function fetchSwiperMealData(meal,mealHTML) {
     try {
       await fetchData(meal);
-      console.log(mealVariable); // Access the global variable here
+      // console.log(mealVariable); // Access the global variable here
       mealVariable.forEach((food) => {
+        let recipeId=food.recipe.uri.slice(food.recipe.uri.lastIndexOf("_") + 1);
           mealHTML += `
           <div class="swiper-slide">
           <div class="card">
@@ -90,7 +94,7 @@ async function fetchSwiperMealData(meal,mealHTML) {
               alt=""
             />
           </div>
-          <div class="food-details">
+          <div class="food-details" data-recipe-id='${recipeId}'>
             <h5 class="food-name">${food.recipe.label}</h5>
             <div class="bottom-div">
               <div class="time-div">
@@ -108,10 +112,45 @@ async function fetchSwiperMealData(meal,mealHTML) {
           </div>
           `;
         });
-        document.querySelector(`#${meal}`).innerHTML=mealHTML
+        document.querySelector(`#${meal}`).innerHTML=mealHTML;
+        adjustCardHeightSlider()
     }
      catch (error) {
       // Handle any errors here
       console.error('Error fetching breakfast data:', error);
     }
   }
+
+
+  // --------------------resizing cards-------------------------
+  function adjustCardHeightSlider() {
+    const cards = document.querySelectorAll('.swiper-slide .card .food-details .food-name');
+    let maxHeight = 0;
+  
+    cards.forEach((card) => {
+      card.style.height = ''; // Reset card height to auto
+      maxHeight = Math.max(maxHeight, card.offsetHeight);
+      console.log();
+    });
+  
+    cards.forEach((card) => {
+      card.style.height = maxHeight + 'px';
+    });
+  }
+
+  function adjustCardHeight() {
+    const cards = document.querySelectorAll('.tab-content .card .food-details .food-name');
+    let maxHeight = 0;
+  
+    cards.forEach((card) => {
+      card.style.height = ''; // Reset card height to auto
+      maxHeight = Math.max(maxHeight, card.offsetHeight);
+      console.log();
+    });
+  
+    cards.forEach((card) => {
+      card.style.height = maxHeight + 'px';
+    });
+  }
+window.addEventListener('resize', adjustCardHeightSlider);
+window.addEventListener('resize', adjustCardHeight);
