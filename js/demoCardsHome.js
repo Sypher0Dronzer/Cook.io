@@ -8,7 +8,7 @@ for (let index = 0; index < 8; index++) {
         alt=""
       />
     </div>
-    <div class="food-details">
+    <div class="food-details" data-recipe-id='1234'>
       <h5 class="food-name">Spelt Everything Crackers</h5>
       <div class="bottom-div">
         <div class="time-div">
@@ -20,7 +20,51 @@ for (let index = 0; index < 8; index++) {
         </span>
       </div>
     </div>
-  </div>`
+  </div>
+  <div class="recipe-div" id='1234'>
+        <div class="left-div">
+
+          <div class="img-div">
+            <img src="images/burger-with-melted-cheese.webp" alt="" />
+          </div>
+        </div>
+        <div class="recipe-details-div">
+          <div class="name-div">
+            <h2>Spelt everything Crackers</h2>
+            <span class="material-symbols-outlined close-tab"> close </span>
+          </div>
+          <p class="author">by Smitten kitchen</p>
+          <div class="recipe-extra-info">
+            <div class="extra-div">
+              <h1>4</h1>
+              <p>Ingredients</p>
+            </div>
+            <div class="extra-div">
+              <h1>4</h1>
+              <p>Ingredients</p>
+            </div>
+            <div class="extra-div">
+              <h1>4</h1>
+              <p>Calories</p>
+            </div>
+          </div>
+          <div class="serving-div">
+            <h1>Ingredients</h1>
+            <p>8 servings</p>
+          </div>
+          <div class="list-ingredients">
+            <ul>
+              <li>1/4 tea</li>
+              <li>1/4 tea</li>
+              <li>1/4 tea</li>
+              <li>1/4 tea</li>
+              <li>1/4 tea</li>
+              <li>1/4 tea</li>
+              <li>1/4 tea</li>
+            </ul>
+          </div>
+        </div>
+      </div>`
      
  }
  ['breakfast','lunch','dinner','snack','teatime'].forEach(meal=>{

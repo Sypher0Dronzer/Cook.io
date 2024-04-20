@@ -52,7 +52,46 @@ async function fetchMealData(meal,mealHTML) {
                 </span>
           </div>
         </div>
-        </div>`;
+        </div>
+        <div class="recipe-div" id='${recipeId}'>
+            <div class="left-div">
+
+              <div class="img-div">
+                <img src="${food.recipe.image}" alt="" />
+              </div>
+            </div>
+            <div class="recipe-details-div">
+              <div class="name-div">
+                <h2>${food.recipe.label}</h2>
+                <span class="material-symbols-outlined close-tab"> close </span>
+              </div>
+              <p class="author">by ${food.recipe.source}</p>
+              <div class="recipe-extra-info">
+                <div class="extra-div">
+                  <h1>${food.recipe.ingredientLines.length}</h1>
+                  <p>Ingredients</p>
+                </div>
+                <div class="extra-div">
+                  <h1>${calctime.time || '<1'}</h1>
+                  <p>${calctime.timeUnit}</p>
+                </div>
+                <div class="extra-div">
+                  <h1>${food.recipe.calories}}</h1>
+                  <p>Calories</p>
+                </div>
+              </div>
+              <div class="serving-div">
+                <h1>Ingredients</h1>
+                <p>8 servings</p>
+              </div>
+              <div class="list-ingredients">
+                <ul>
+                ${food.recipe.ingredientLines.map((ingredient)=>{return `<li>${ingredient}</li>`})}
+                  
+                </ul>
+              </div>
+            </div>
+          </div>`;
       });
       document.querySelector(`#${meal}`).innerHTML=mealHTML
       adjustCardHeight()
