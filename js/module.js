@@ -8,3 +8,6 @@ export const getTime = (minute) => {
   
     return { time, timeUnit };
   };
+ export function RoundOff(value) {
+    return Number(value.toFixed(2));
+  }

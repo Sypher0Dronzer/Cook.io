@@ -3,6 +3,7 @@ var swiper = new Swiper(".mySwiper1", {
         delay: 2500,
         disableOnInteraction: false,
       },
+      simulateTouch:false,
       slidesPerView: 2,
       spaceBetween: 10,
       
@@ -25,10 +26,10 @@ var swiper = new Swiper(".mySwiper1", {
   });
 
   var swiper2 = new Swiper(".mySwiper2", {
-    autoplay: {
-        delay: 3500,
-        disableOnInteraction: false,
-      },
+    // autoplay: {
+    //     delay: 3500,
+    //     disableOnInteraction: false,
+    //   },
       slidesPerView: 2,
       spaceBetween: 10,
       
