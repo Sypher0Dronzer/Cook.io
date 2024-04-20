@@ -1045,3 +1045,13 @@ font-size: 18px;
 font-weight: 500;
   }
 }
+
+
+
+  /*--------------------------*/
+/* bookmark*/
+/*--------------------------*/
+.added{
+  color: white;
+  background: red;
+}

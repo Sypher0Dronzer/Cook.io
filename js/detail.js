@@ -15,7 +15,9 @@ export function PopUp(){
             let foodId=foodDetails.dataset.recipeId
             console.log(foodId);
             document.getElementById(`${foodId}`).style.display='grid'
+            document.getElementById(`${foodId}`).style.zIndex='7000'
         })
     })
 }
 
+PopUp()

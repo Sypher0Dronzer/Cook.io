@@ -1,8 +1,9 @@
 var swiper = new Swiper(".mySwiper1", {
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
+    // autoplay: {
+    //     delay: 2500,
+    //     disableOnInteraction: false,
+    //   },
+    
       simulateTouch:false,
       slidesPerView: 2,
       spaceBetween: 10,

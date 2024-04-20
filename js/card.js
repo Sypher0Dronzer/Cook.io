@@ -92,7 +92,7 @@ async function fetchMealData(meal, mealHTML) {
               <div class="list-ingredients">
                 <ul>
                 ${food.recipe.ingredientLines.map((ingredient) => {
-                  return '<li>${ingredient}</li>'
+                  return `<li>${ingredient}</li>`
                 })}
                   
                 </ul>
