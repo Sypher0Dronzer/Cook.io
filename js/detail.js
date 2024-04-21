@@ -8,16 +8,21 @@ export function PopUp(){
         })
     })
 
-    document.querySelectorAll('.card').forEach(card=>{
+    document.querySelectorAll('.card img, .card .food-name').forEach(card=>{
         card.addEventListener('click',()=>{
-            let foodDetails=card.querySelector('.food-details')
+            // let foodDetails=card.querySelector('.food-details')
+            let foodDetails
+            if(card.classList.contains('.food-name'))
+          foodDetails=card.parentNode
+        else{
+            foodDetails=card.parentNode.parentNode.querySelector('.food-details')
+        }
             console.log(card);
             let foodId=foodDetails.dataset.recipeId
             console.log(foodId);
+            
             document.getElementById(`${foodId}`).style.display='grid'
-            document.getElementById(`${foodId}`).style.zIndex='7000'
+            
         })
     })
 }
-
-PopUp()

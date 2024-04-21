@@ -51,6 +51,8 @@
         <div class="mid-nav">
           <a href="index.html">Home</a>
           <a href="recipes.html" class="focused">Recipes</a>
+          <a href="bookmarks.html">Bookmarks</a>
+
         </div>
       </div>
       <div class="mobile">
@@ -60,6 +62,9 @@
           </div>
           <div class="">
             <a href="recipes.html" class="focused">Recipes</a>
+          </div>
+          <div class="">
+            <a href="recipes.html">Recipes</a>
           </div>
         </div>
       </div>
@@ -162,15 +167,16 @@
     <!-- ------------------results of search ------------------- -->
     <div class="results-div">
       <h4>All Results</h4>
+      <div class="error-block">Theres an error in the api call</div>
       <div class="result-cards"></div>
     </div>
 
     <!-- ----------------------scripts--------------------- -->
-    <script src="js/detail.js"></script>
-
-    <script src="js/demoCards.js"></script>
-    <script src="js/search.js"></script>
+    
+    <!-- <script src="js/demoCards.js"></script> -->
     <script src="js/filter.js"></script>
+    <script type="module" src="js/search.js"></script>
+    <script type="module" src="js/detail.js"></script>
     <!-- ----------------------Theme--------------------- -->
     <script type="module" src="js/theme.js"></script>
   </body>

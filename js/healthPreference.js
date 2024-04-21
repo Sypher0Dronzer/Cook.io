@@ -9,7 +9,7 @@ const values = [
 ]
 values.forEach(e=>{
 let preference=document.createElement('div');
-preference.classList='preference'
+preference.className='preference'
 preference.innerText=e;
 document.querySelector('.pref-container .flex-div').appendChild(preference)
 })
