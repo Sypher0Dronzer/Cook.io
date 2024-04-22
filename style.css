@@ -1068,7 +1068,7 @@ body::-webkit-scrollbar-thumb {
 BOOKMARKS
 ----------------------------------------- */
 
-h1{
+.bookmark-header h1{
   font-size: 30px;
   margin: 70px auto 20px;
   text-align: center;
