@@ -73,9 +73,8 @@ async function fetchMealData(meal, mealHTML) {
           ingredientList: food.recipe.ingredientLines,
         };
         const bookmarks = JSON.parse(localStorage.getItem("bookmarks"));
-        const existingRecipeIndex = bookmarks.findIndex(
-          (item) => item.id === recipeData.id
-        );
+        const existingRecipeIndex =bookmarks? bookmarks.findIndex(
+          (item) => item.id === recipeData.id) : -1;
 
         if (existingRecipeIndex !== -1) {
           // If already present, remove the existing recipe from bookmarks
@@ -301,9 +300,8 @@ async function fetchSwiperMealData(meal, mealHTML, container) {
             ingredientList: food.recipe.ingredientLines,
           };
           const bookmarks = JSON.parse(localStorage.getItem("bookmarks"));
-          const existingRecipeIndex = bookmarks.findIndex(
-            (item) => item.id === recipeData.id
-          );
+          const existingRecipeIndex =bookmarks? bookmarks.findIndex(
+            (item) => item.id === recipeData.id) : -1;
 
           if (existingRecipeIndex !== -1) {
             // If already present, remove the existing recipe from bookmarks

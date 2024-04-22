@@ -226,7 +226,7 @@ async function renderCards(upperlimit = 101) {
       };
       const bookmarks = JSON.parse(localStorage.getItem("bookmarks"));
       const existingRecipeIndex =bookmarks? bookmarks.findIndex(
-        (item) => item.id === recipeData.id) : false;
+        (item) => item.id === recipeData.id) : -1;
 
       if (existingRecipeIndex !== -1) {
         // If already present, remove the existing recipe from bookmarks
