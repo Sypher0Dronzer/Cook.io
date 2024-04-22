@@ -223,6 +223,7 @@ async function renderCards(upperlimit = 101) {
             ingredientLength: food.recipe.ingredientLines.length,
             calories: RoundOff(food.recipe.calories),
             ingredientList: food.recipe.ingredientLines,
+            serving:food.recipe.yield
           };
           const bookmarks = localStorage.getItem("bookmarks")
             ? JSON.parse(localStorage.getItem("bookmarks"))
@@ -274,7 +275,7 @@ async function renderCards(upperlimit = 101) {
         </div>
         <div class="serving-div">
           <h1>Ingredients</h1>
-          <p>8 servings</p>
+          <p>${food.recipe.yield} servings</p>
         </div>
         <div class="list-ingredients">
         <ul>

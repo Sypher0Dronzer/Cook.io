@@ -26,6 +26,7 @@ function initializeBookmarks() {
 
 // Initialize bookmarks
 export let bookmarks = localStorage.getItem("bookmarks")?JSON.parse(localStorage.getItem("bookmarks")):[];
+console.log(bookmarks);
 bookmarks.forEach((food) => {
   let card = document.createElement("div");
   card.className = "card";
@@ -92,7 +93,7 @@ bookmarks.forEach((food) => {
               </div>
               <div class="serving-div">
                 <h1>Ingredients</h1>
-                <p>8 servings</p>
+                <p>${food.serving} servings</p>
               </div>
               <div class="list-ingredients">
               <ul>

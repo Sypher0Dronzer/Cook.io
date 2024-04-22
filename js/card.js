@@ -71,6 +71,7 @@ async function fetchMealData(meal, mealHTML) {
           ingredientLength: food.recipe.ingredientLines.length,
           calories: RoundOff(food.recipe.calories),
           ingredientList: food.recipe.ingredientLines,
+          serving:food.recipe.yield
         };
         const bookmarks = localStorage.getItem("bookmarks")?JSON.parse(localStorage.getItem("bookmarks")):[];
         const existingRecipeIndex = bookmarks.findIndex(
@@ -118,7 +119,7 @@ async function fetchMealData(meal, mealHTML) {
               </div>
               <div class="serving-div">
                 <h1>Ingredients</h1>
-                <p>8 servings</p>
+                <p>${food.recipe.yield} servings</p>
               </div>
               <div class="list-ingredients">
               <ul>
@@ -130,66 +131,6 @@ async function fetchMealData(meal, mealHTML) {
               </ul>
               </div>
             </div>`;
-      // mealHTML += `
-      //   <div class="card" >
-      //   <div class="food-img-div">
-      //     <img
-      //       src="${food.recipe.image}"
-      //       alt=""
-      //     />
-      //   </div>
-      //   <div class="food-details" data-recipe-id='${recipeId}'>
-      //     <h5 class="food-name">${food.recipe.label}</h5>
-      //     <div class="bottom-div">
-      //       <div class="time-div">
-      //         <span class="material-symbols-outlined"> timer </span>
-      //         <p>${calctime.time || "<1"} ${calctime.timeUnit}</p>
-      //       </div>
-      //       <span class="material-symbols-outlined bookmrk-btn">
-      //           bookmark
-      //           </span>
-      //     </div>
-      //   </div>
-      //   </div>
-      //   <div class="recipe-div" id='${recipeId}'>
-      //       <div class="left-div">
-
-      //         <div class="img-div">
-      //           <img src="${food.recipe.image}" alt="" />
-      //         </div>
-      //       </div>
-      //       <div class="recipe-details-div">
-      //         <div class="name-div">
-      //           <h2>${food.recipe.label}</h2>
-      //           <span class="material-symbols-outlined close-tab"> close </span>
-      //         </div>
-      //         <p class="author">by ${food.recipe.source}</p>
-      //         <div class="recipe-extra-info">
-      //           <div class="extra-div">
-      //             <h1>${food.recipe.ingredientLines.length}</h1>
-      //             <p>Ingredients</p>
-      //           </div>
-      //           <div class="extra-div">
-      //             <h1>${calctime.time || "<1"}</h1>
-      //             <p>${calctime.timeUnit}</p>
-      //           </div>
-      //           <div class="extra-div">
-      //             <h1>${RoundOff(food.recipe.calories)}</h1>
-      //             <p>Calories</p>
-      //           </div>
-      //         </div>
-      //         <div class="serving-div">
-      //           <h1>Ingredients</h1>
-      //           <p>8 servings</p>
-      //         </div>
-      //         <div class="list-ingredients">
-      //         <ul>
-      //         ${food.recipe.ingredientLines.map((ingredient) => {
-      //           return `<li>${ingredient}</li>`}).join('')}
-      //         </ul>
-      //         </div>
-      //       </div>
-      //     </div>`;
       document.querySelector(`#${meal}`).appendChild(card);
       document.querySelector(`#${meal}`).appendChild(recipeDiv);
     });
@@ -298,6 +239,7 @@ async function fetchSwiperMealData(meal, mealHTML, container) {
             ingredientLength: food.recipe.ingredientLines.length,
             calories: RoundOff(food.recipe.calories),
             ingredientList: food.recipe.ingredientLines,
+            serving:food.recipe.yield
           };
           const bookmarks = localStorage.getItem("bookmarks")?JSON.parse(localStorage.getItem("bookmarks")):[];
 
