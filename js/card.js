@@ -197,7 +197,7 @@ async function fetchMealData(meal, mealHTML) {
     adjustCardHeight();
   } catch (error) {
     // Handle any errors here
-    console.error("Error fetching breakfast data:", error);
+    console.error("Error fetching meal data:", error);
   }
 }
 
@@ -320,7 +320,7 @@ async function fetchSwiperMealData(meal, mealHTML, container) {
     adjustCardHeightSlider();
   } catch (error) {
     // Handle any errors here
-    console.error("Error fetching breakfast data:", error);
+    console.error("Error fetching meal data:", error);
   }
 }
 

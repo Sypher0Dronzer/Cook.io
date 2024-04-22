@@ -17,9 +17,7 @@ export function PopUp(){
         else{
             foodDetails=card.parentNode.parentNode.querySelector('.food-details')
         }
-            console.log(card);
             let foodId=foodDetails.dataset.recipeId
-            console.log(foodId);
             
             document.getElementById(`${foodId}`).style.display='grid'
             

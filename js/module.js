@@ -21,7 +21,6 @@ export const getTime = (minute) => {
     cards.forEach((card) => {
       card.style.height = ""; // Reset card height to auto
       maxHeight = Math.max(maxHeight, card.offsetHeight);
-      console.log();
     });
   
     cards.forEach((card) => {
@@ -38,7 +37,6 @@ export const getTime = (minute) => {
     cards.forEach((card) => {
       card.style.height = ""; // Reset card height to auto
       maxHeight = Math.max(maxHeight, card.offsetHeight);
-      console.log();
     });
   
     cards.forEach((card) => {
@@ -55,7 +53,6 @@ export const getTime = (minute) => {
     cards.forEach((card) => {
       card.style.height = ""; // Reset card height to auto
       maxHeight = Math.max(maxHeight, card.offsetHeight);
-      console.log();
     });
   
     cards.forEach((card) => {

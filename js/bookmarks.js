@@ -26,7 +26,6 @@ function initializeBookmarks() {
 
 // Initialize bookmarks
 export let bookmarks = localStorage.getItem("bookmarks")?JSON.parse(localStorage.getItem("bookmarks")):[];
-console.log(bookmarks);
 bookmarks.forEach((food) => {
   let card = document.createElement("div");
   card.className = "card";
@@ -58,7 +57,6 @@ bookmarks.forEach((food) => {
       bookmarks.splice(existingRecipeIndex, 1);
       document.querySelector(".bookmarked-recipes").removeChild(card);
 
-      console.log(bookmarks);
       localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
     }
   });

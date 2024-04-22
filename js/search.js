@@ -77,18 +77,20 @@ let apiUrl = "";
 let allRecipes = "";
 let cardsRendered = 0;
 
- let queryParams = localStorage.getItem("queryParams")?JSON.parse(localStorage.getItem("queryParams")):{
-  query: "chicken",
-  from: 0,
-  to: 100,
-  healthLabels: [],
-  dietLabels: [],
-  cuisineType: "",
-  mealType: "dinner",
-  cookingTime: "",
-  ingredients: "",
-  dishType: "",
-};
+let queryParams = localStorage.getItem("queryParams")
+  ? JSON.parse(localStorage.getItem("queryParams"))
+  : {
+      query: "egg",
+      from: 0,
+      to: 100,
+      healthLabels: [],
+      dietLabels: [],
+      cuisineType: "",
+      mealType: "dinner",
+      cookingTime: "",
+      ingredients: "",
+      dishType: "",
+    };
 
 Search(queryParams);
 document.getElementById("apply").addEventListener("click", ()=>{
@@ -98,25 +100,23 @@ document.getElementById("apply").addEventListener("click", ()=>{
   }
   Search(queryParams)
 });
-document.getElementById("clear").addEventListener("click", ()=>{
-  queryParams.healthLabels=[]
-  queryParams.dietLabels=[]
-  queryParams.cuisineType=''
-  queryParams.mealType=''
-  queryParams.cookingTime=''
-  queryParams.dishType=''
-  console.log('I m working ');
-  document.querySelectorAll('.option-selected').forEach((opt)=>{    
-    opt.classList.remove('option-selected')
-  })
+document.getElementById("clear").addEventListener("click", () => {
+  queryParams.healthLabels = [];
+  queryParams.dietLabels = [];
+  queryParams.cuisineType = "";
+  queryParams.mealType = "";
+  queryParams.cookingTime = "";
+  queryParams.dishType = "";
+  document.querySelectorAll(".option-selected").forEach((opt) => {
+    opt.classList.remove("option-selected");
+  });
 });
 
 export async function Search(params) {
-  document.querySelector('.result-cards').innerHTML=``
-  cardsRendered=0;
-  
+  document.querySelector(".result-cards").innerHTML = ``;
+  cardsRendered = 0;
+
   apiUrl = constructRecipeSearchQuery(params);
-  console.log(apiUrl);
   await fetchData(apiUrl);
   renderCards(allRecipes.length);
 }
@@ -154,7 +154,7 @@ document.querySelectorAll(".option").forEach((option) => {
         ].filter((item) => item !== option.textContent);
         option.classList.remove("option-selected");
       }
-      console.log(queryParams);
+      // console.log(queryParams);
     }
   });
 });
@@ -165,7 +165,7 @@ async function fetchData(q) {
   try {
     const response = await fetch(url);
     const data = await response.json();
-    if (data.hits.length == 0 && batch == 1) {
+    if (data.hits.length == 0) {
       document.querySelector(".results-div h4").innerHTML =
         "No results for your preference";
       document.querySelector(".result-cards").innerHTML = "";
@@ -212,32 +212,35 @@ async function renderCards(upperlimit = 101) {
              </span>
        </div>
      </div>`;
-     card.querySelector(".bookmrk-btn").addEventListener("click", (e) => {
-      e.target.classList.toggle("bookmarked");
-      let recipeData = {
-        id: recipeId,
-        img: food.recipe.image,
-        label: food.recipe.label,
-        time: [calctime.time || "<1", calctime.timeUnit],
-        source: food.recipe.source,
-        ingredientLength: food.recipe.ingredientLines.length,
-        calories: RoundOff(food.recipe.calories),
-        ingredientList: food.recipe.ingredientLines,
-      };
-      const bookmarks = localStorage.getItem("bookmarks")?JSON.parse(localStorage.getItem("bookmarks")):[];
-      const existingRecipeIndex =bookmarks.findIndex(
-        (item) => item.id === recipeData.id);
+        card.querySelector(".bookmrk-btn").addEventListener("click", (e) => {
+          e.target.classList.toggle("bookmarked");
+          let recipeData = {
+            id: recipeId,
+            img: food.recipe.image,
+            label: food.recipe.label,
+            time: [calctime.time || "<1", calctime.timeUnit],
+            source: food.recipe.source,
+            ingredientLength: food.recipe.ingredientLines.length,
+            calories: RoundOff(food.recipe.calories),
+            ingredientList: food.recipe.ingredientLines,
+          };
+          const bookmarks = localStorage.getItem("bookmarks")
+            ? JSON.parse(localStorage.getItem("bookmarks"))
+            : [];
+          const existingRecipeIndex = bookmarks.findIndex(
+            (item) => item.id === recipeData.id
+          );
 
-      if (existingRecipeIndex !== -1) {
-        // If already present, remove the existing recipe from bookmarks
-        bookmarks.splice(existingRecipeIndex, 1);
-      } else {
-        // If not already present, add recipeData to bookmarks
-        bookmarks.push(recipeData);
-      }
-      // console.log(bookmarks);
-      localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
-    });
+          if (existingRecipeIndex !== -1) {
+            // If already present, remove the existing recipe from bookmarks
+            bookmarks.splice(existingRecipeIndex, 1);
+          } else {
+            // If not already present, add recipeData to bookmarks
+            bookmarks.push(recipeData);
+          }
+          // console.log(bookmarks);
+          localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
+        });
 
         let recipeDiv = document.createElement("div");
         recipeDiv.className = "recipe-div";
@@ -292,7 +295,7 @@ async function renderCards(upperlimit = 101) {
     adjustCardHeightRecipes();
   } catch (error) {
     // Handle any errors here
-    console.error("Error fetching breakfast data:", error);
+    console.error("Error fetching meal data:", error);
   }
 }
 

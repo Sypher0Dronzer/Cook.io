@@ -12,7 +12,7 @@ document.querySelector('.recipe-search').addEventListener('click',(event)=>{
         ingredients: "",
         dishType: "",
       };
-    console.log(queryParams);
+    // console.log(queryParams);
     queryParams.query=document.querySelector('.input-box input').value
     localStorage.setItem("queryParams", JSON.stringify(queryParams));
 
@@ -20,22 +20,22 @@ document.querySelector('.recipe-search').addEventListener('click',(event)=>{
 })
 document.querySelectorAll('.preference').forEach(preference=>{
     preference.addEventListener('click',()=>{
-        console.log(preference.textContent);
+        // console.log(preference.textContent);
         let queryParams = {
             query: "",
             from: 0,
-            to: 60,
+            to: 100,
             healthLabels: [],
             dietLabels: [],
             cuisineType: "",
-            mealType: "dinner",
+            mealType: "",
             cookingTime: "",
             ingredients: "",
             dishType: "",
           };
         //   queryParams.healthLabels.push(preference.textContent)
           queryParams.query=preference.textContent
-          console.log(queryParams);
+          // console.log(queryParams);
         localStorage.setItem("queryParams", JSON.stringify(queryParams));
     
         window.location.href='recipes.html'
@@ -43,3 +43,24 @@ document.querySelectorAll('.preference').forEach(preference=>{
     })
 })
 
+document.querySelectorAll('.show-more').forEach(element=>{
+  element.addEventListener('click',()=>{
+    let queryParams = {
+        query: "",
+        from: 0,
+        to: 100,
+        healthLabels: [],
+        dietLabels: [],
+        cuisineType: "",
+        mealType: "",
+        cookingTime: "",
+        ingredients: "",
+        dishType: "",
+      };
+    //   queryParams.healthLabels.push(preference.textContent)
+      queryParams.query=element.id=='french-search'? 'french':'asian';
+      // console.log(queryParams);
+    localStorage.setItem("queryParams", JSON.stringify(queryParams));
+
+    window.location.href='recipes.html'
+})})
