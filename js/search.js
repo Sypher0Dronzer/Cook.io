@@ -93,13 +93,37 @@ let queryParams = localStorage.getItem("queryParams")
     };
 
 Search(queryParams);
-document.getElementById("apply").addEventListener("click", ()=>{
-  if (document.querySelector(".filter-search input").value !=''){
+document.getElementById("apply").addEventListener("click", Apply);
+document
+  .querySelector(".filter-search input")
+  .addEventListener("keydown", function (event) {
+    if (event.keyCode === 13) {
+      Apply();
+    }
+  });
+function Apply() {
+  if (document.querySelector(".filter-search input").value != "") {
     queryParams.query = document.querySelector(".filter-search input").value;
-    document.querySelector(".filter-search input").value=''
+    document.querySelector(".filter-search input").value = "";
+  } else {
+    queryParams.query =
+      queryParams.healthLabels.length > 0
+        ? queryParams.healthLabels[0]
+        : queryParams.dietLabels.length > 0
+        ? queryParams.dietLabels[0]
+        : queryParams.cuisineType ||
+          queryParams.cookingTime ||
+          queryParams.ingredients ||
+          queryParams.dishType ||
+          queryParams.mealType ||
+          "cake";
   }
-  Search(queryParams)
-});
+  if (window.innerWidth <= 900) {
+    document.querySelector(".filter-container").style.left = "-100%";
+  }
+  Search(queryParams);
+}
+
 document.getElementById("clear").addEventListener("click", () => {
   queryParams.healthLabels = [];
   queryParams.dietLabels = [];
@@ -117,6 +141,7 @@ export async function Search(params) {
   cardsRendered = 0;
 
   apiUrl = constructRecipeSearchQuery(params);
+  console.log(apiUrl);
   await fetchData(apiUrl);
   renderCards(allRecipes.length);
 }
@@ -134,12 +159,20 @@ const multiTag = {
 document.querySelectorAll(".option").forEach((option) => {
   option.addEventListener("click", (e) => {
     if (option.parentNode.id != "health" && option.parentNode.id != "diet") {
-      queryParams[singleTag[option.parentNode.id]] = option.textContent;
       document.querySelectorAll(`#${option.parentNode.id} *`).forEach((k) => {
-        if (k.classList.contains("option-selected"))
+        if (k.classList.contains("option-selected") && k != option)
           k.classList.remove("option-selected");
       });
-      option.classList.add("option-selected");
+      if (option.classList.contains("option-selected")) {
+        console.log(true);
+        option.classList.remove("option-selected");
+        queryParams[singleTag[option.parentNode.id]] = "";
+      } else {
+        queryParams[singleTag[option.parentNode.id]] = option.textContent;
+        console.log(false);
+
+        option.classList.add("option-selected");
+      }
     } else {
       if (
         queryParams[multiTag[option.parentNode.id]].indexOf(
@@ -223,7 +256,7 @@ async function renderCards(upperlimit = 101) {
             ingredientLength: food.recipe.ingredientLines.length,
             calories: RoundOff(food.recipe.calories),
             ingredientList: food.recipe.ingredientLines,
-            serving:food.recipe.yield
+            serving: food.recipe.yield,
           };
           const bookmarks = localStorage.getItem("bookmarks")
             ? JSON.parse(localStorage.getItem("bookmarks"))

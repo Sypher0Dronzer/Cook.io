@@ -57,6 +57,8 @@ bookmarks.forEach((food) => {
       // If already present, remove the existing recipe from bookmarks
       bookmarks.splice(existingRecipeIndex, 1);
       document.querySelector(".bookmarked-recipes").removeChild(card);
+      
+      document.querySelector(".bookmarked-recipes").removeChild(document.getElementById(`${food.id}`));
 
       localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
     }
